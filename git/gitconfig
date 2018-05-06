@@ -1,0 +1,352 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+  editor = code --wait
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  autocrlf = false
+  eol = lf
+  compression = -1
+  whitespace = trailing-space,space-before-tab
+  excludesFile = ~/.gitignore_global
+  attributesFile = ~/.gitattributes
+[url "https://github"]
+  insteadOf = git://github
+[status]
+  short = true
+  branch = true
+[commit]
+  gpgsign = true
+[push]
+  default = current
+[pull]
+  rebase = true
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[rebase]
+  autoStash = true
+  autoSquash = true
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+  trustExitCode = true
+  keepBackup = false
+[diff]
+  tool = vscode
+  compactionHeuristic = true
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+  prompt = false
+[apply]
+  whitespace = nowarn
+[grep]
+  extendRegexp = true
+  lineNumber = true
+[submodule]
+  fetchJobs = 4
+[help]
+  autocorrect = 1
+[log]
+  showSignature = false
+[color]
+  ui = true
+  diff = auto
+  branch = auto
+  status = auto
+  interactive = auto
+[color "branch"]
+  current = cyan reverse
+  local = yellow
+  remote = green
+[color "status"]
+  added = yellow
+  changed = cyan
+  untracked = red
+[color "diff"]
+  meta = 227
+  frag = magenta bold
+  commit = 227 bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[pretty]
+  # Result: <short-sha> <commit-message> (<pointer-names>) -- <commit-author-name>; <relative-time>
+  nice = "%C(yellow)%h%C(reset) %C(white)%s%C(cyan)%d%C(reset) -- %an; %ar"
+[alias]
+
+###############################################################################
+# One-letter Aliases                                                          #
+###############################################################################
+
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  f = fetch
+  g = grep
+  l = log
+  m = merge
+  o = checkout
+  p = pull
+  r = remote
+  s = status
+  w = whatchanged
+
+###############################################################################
+# Status Aliases                                                              #
+###############################################################################
+
+  ss = status --short
+  ssb = status --short --branch
+
+###############################################################################
+# Add Aliases                                                                 #
+###############################################################################
+
+  aa = add --all
+  ap = add --patch
+  au = add --update
+
+###############################################################################
+# Branch Aliases                                                              #
+###############################################################################
+
+  branches = branch -a
+  co = checkout
+  cob = checkout -b
+  be = branch --edit-description
+  bm = branch --merged
+  bnm = branch --no-merged
+  sb = show-branch # show-branch - print a list of branches and their commits.
+  bclean = "!f() { git checkout ${1-master} && git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f" # cleanup of merged branches
+  bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f" # switches to master; runs `git up` to sync master with origin; runs `git bclean` to cleanup merged branches
+
+###############################################################################
+# Commit Aliases                                                              #
+###############################################################################
+
+  amend = commit -a --amend
+  commend = commit --amend --no-edit
+  cam = commit --amend --message
+  ci = commit --interactive
+  addac = !git add -A && git commit -m
+  update = !git add -u && git commit -m ":zap: updates"
+  undo = reset HEAD~1 --mixed # resets previous commit, but keeps all the changes in working directory
+  fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET && EDITOR=true git rebase --interactive --autosquash $TARGET~; }; f"  # use git fixup COMMIT to change a specific "COMMIT", exactly like you would use git commit --amend to change the latest one.
+
+###############################################################################
+# Pull Aliases                                                                #
+###############################################################################
+
+  pf = pull --ff-only # pull if a merge can be resolved as a fast-forward, otherwise fail.
+
+###############################################################################
+# Push Aliases                                                                #
+###############################################################################
+
+  please = push --force-with-lease
+  undo-push = push -f origin HEAD^:master
+
+###############################################################################
+# Cherry-Pick Aliases                                                         #
+###############################################################################
+
+  cp = cherry-pick
+  cp-nx = cherry-pick --no-commit -x
+  cherry-pick-merge = !"sh -c 'git cherry-pick --no-commit --mainline 1 $0 && \
+    git log -1 --pretty=%P $0 | cut -b 42- > .git/MERGE_HEAD && \
+    git commit --verbose'"
+
+#                                    #
+############ DIFF ALIASES ############
+#                                    #
+
+  changed = show --pretty="format:" --name-only
+  diff-all = !"for name in $(git diff --name-only $1); do git difftool $1 $name & done"
+  diff-changes = diff --name-status -r
+  diff-stat = diff --stat --ignore-space-change -r
+  diff-cached = diff --cached
+  diff-staged = diff --staged
+  diff-word = diff --word-diff
+  dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f" # diff-so-fancy required
+
+###############################################################################
+# Merge Aliases                                                               #
+###############################################################################
+
+  me = merge --no-commit --no-ff # merge but without autocommit, and with a commit even if the merge resolved as a fast-forward.
+  fix = !git diff --name-only --relative -z --diff-filter=U | xargs -0 ${EDITOR} # open conflicts in editor
+  merge-span = !"f() { echo $(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f1)$1$(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f2); }; f" # find the span of commits that exist(ed) -- not so useful in itself, but used by other aliases.
+  merge-span-log = "!git log `git merge-span .. $1`" # Find the commits that were introduced by a merge
+  merge-span-diff = !"git diff `git merge-span ... $1`" # Show the changes that were introduced by a merge
+  merge-span-difftool = !"git difftool `git merge-span ... $1`" # Show the changes that were introduced by a merge, in your difftool
+
+  # Edit all files of the given type
+  edit-cached = !"f() { git ls-files --cached | sort -u ; }; `git var GIT_EDITOR` `f`"
+  edit-deleted = !"f() { git ls-files --deleted | sort -u ; }; `git var GIT_EDITOR` `f`"
+  edit-others = !"f() { git ls-files --others | sort -u ; }; `git var GIT_EDITOR` `f`"
+  edit-ignored = !"f() { git ls-files --ignored | sort -u ; }; `git var GIT_EDITOR` `f`"
+  edit-killed = !"f() { git ls-files --killed | sort -u ; }; `git var GIT_EDITOR` `f`"
+  edit-modified = !"f() { git ls-files --modified | sort -u ; }; `git var GIT_EDITOR` `f`"
+  edit-stage = !"f() { git ls-files --stage | cut -f2 | sort -u ; }; `git var GIT_EDITOR` `f`"
+
+  # Editing and adding conflicted files
+  edit-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; `git var GIT_EDITOR` `f`"
+  add-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+
+  # Ours & Theirs - easy merging when you know which files you want
+  ours   = !"f() { git checkout --ours $@ && git add $@; }; f" # ours: checkout our version of a file and add it
+  theirs = !"f() { git checkout --theirs $@ && git add $@; }; f" # theirs: checkout their version of a file and add it
+
+###############################################################################
+# Rebase Aliases                                                              #
+###############################################################################
+
+  rb = rebase
+  rbc = rebase --continue  # continue the rebasing process after resolving a conflict manually and updating the index with the resolution.
+  rbs = rebase --skip # restart the rebasing process by skipping the current patch.
+  rbi = rebase --interactive @{upstream} # rebase interactive on our unpushed commits.
+  rebase-recent = !git rebase --interactive $(git remote-ref)
+  rebase-branch = !"git rebase --interactive `git merge-base master HEAD`" # Interactively rebase all the commits on the current branch
+
+###############################################################################
+# Workflow Aliases                                                            #
+###############################################################################
+
+  wtf = !sh -c "~/.bin/git-wtf" # displays summary of the state of the current repo
+  ec = config --global -e # opens gitconfig file with $EDITOR
+  cl = clone
+  cloner = clone --recursive # Clone a git repository including all submodules
+  stashes = stash list
+  save = stash save
+  pop = stash pop
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}" # Take a snapshot of your current working tree without removing changes.
+  savepoint = !git add -A && git commit -m 'SAVEPOINT'
+  checkpoint = !git add -A && git commit -m 'SAVEPOINT' && git push
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard # commits everything in working directory and then does a hard reset.
+  bomb = !sh -c "git reset --hard origin && git pull" # wipe everything -— use with caution
+  nuke = !sh -c "~/.bin/git-nuke" # nukes a branch locally and on origin
+  panic = !tar cvf ../git_panic.tar * # tar the repo
+  trav = !zsh -ic git-trav # open travis-ci page
+  ignore-add = "!git status | grep -P \"^\\t\" | grep -vF .gitignore | sed \"s/^\\t//\" >> .gitignore" # Ignore all untracked files by appending them to .gitignore:
+
+  # Do everything we can to synchronize all changes
+  up = !git pull --rebase --prune && git submodule update --init --recursive
+  put = !git commit --all --message="$1" && git push
+  publish = !"git push --set-upstream origin $(git branch-name)" # Publish the current branch by pushing it to the remote "origin" and setting the current branch to track the upstream branch.
+  unpublish = !"git push origin :$(git branch-name)" # Unpublish the current branch by deleting the remote version of the current branch.
+  reincarnate = !"f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f" # Calls the `publish` and `unpublish` aliases.
+
+###############################################################################
+# Maintenace Aliases                                                          #
+###############################################################################
+
+  discard = checkout -- # Discard changes in a (list of) file(s) in working tree
+  cleanout = !git clean -df && git checkout -- . # Clean and discard changes and untracked files in working tree
+  cleanest = clean -ffdx
+  rv = revert # undo the changes from some existing commits
+  rvnc = revert --no-commit # revert without autocommit; useful when you're reverting more than one commits' effect to your index in a row.
+  pruner = !"git prune --expire=now; git reflog expire --expire-unreachable=now --rewrite --all" # prune everything that is unreachable now -- this command takes a long time to run, perhaps even overnight.
+  repacker = repack -a -d -f --depth=300 --window=300 --window-memory=1g # repack a repo the way Linus recommends -- this command takes a long time to run, perhaps even overnight.
+  optimize = !git pruner; git repacker; git prune-packed # Do everything we can to optimize the repository  -- this command takes a long time to run, perhaps even overnight.
+
+###############################################################################
+# Remote Aliases                                                              #
+###############################################################################
+
+  remotes = remote -v
+  rrs = remote show # gives some information about the remote <name>.
+  rru = remote update # fetch updates for a named set of remotes in the repo
+  rrp = remote prune # deletes all stale remote-tracking branches under <name>.
+  prune-stale = !git remote | xargs -n 1 git remote prune # Prune all your stale remote branches
+  incoming = !git remote update --prune; git log ..@{upstream}
+  outgoing = log @{upstream}..
+  push-to-all-remotes = !git remote | xargs -I% -n1 git push % # Push to all remotes
+
+###############################################################################
+# Submodule Aliases                                                           #
+###############################################################################
+
+  sm = submodule
+  smu = submodule update
+  smui = submodule update --init
+  smuir = submodule update --init --recursive # useful to bring a submodule fully up to date.
+
+###############################################################################
+# Tag Management Aliases                                                      #
+###############################################################################
+
+  tags = tag -n1 --list
+  lasttag = describe --tags --abbrev=0 # Last tag in the current branch
+  lasttagged = !git describe --tags `git rev-list --tags --max-count=1` # Latest annotated tag in all branches
+
+###############################################################################
+# Lookup Aliases                                                              #
+###############################################################################
+
+  whois = "!sh -c 'git log --regexp-ignore-case -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -" # whois: given a string for an author, try to figure out full name and email:
+  whatis = show --no-patch --pretty='tformat:%h (%s, %ad)' --date=short # Given any git object, try to show it briefly
+  who = shortlog --summary -- # Show who contributed with summarized changes
+  whorank = shortlog --summary --numbered --no-merges # Show who contributed, in descending order by number of commits
+  issues = !sh -c \"git log $1 --oneline | grep -o \\\"ISSUE-[0-9]\\+\\\" | sort -u\"  # List all issues mentioned in commit messages between range of commits
+  orphans = fsck --full # Find all objects that aren't referenced by any other object
+  refs-by-date = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' # Sort by date for branches; can be useful for spring cleaning
+
+###############################################################################
+# Log Aliases                                                                 #
+###############################################################################
+
+  logg = !git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | emojify | less -r # colored & emojified logs -- emojify package required
+  logp = log --pretty=nice --date-order
+  rl = reflog  # reference log that manages when tips of branches are updated.
+  lp = log --patch # log with patch generation.
+  lk = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset %Cblue%G?%Creset' # log with patch generation.
+  ll = log -n 10 --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=format:'%Cgreen%ad' # log latest - show the 10 most recent lines using `lk`
+  graph = log --color --graph --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%C(blue)%x20(%ce)%x20%C(cyan)[gpg:%GK%x20%G?]%C(reset)%n%x20%s%n"
+  head = log -n1
+  lost = !"git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
+  log-changes = log --oneline --reverse | emojify | less -r # Show log of changes, most recent first
+  log-fresh = log ORIG_HEAD.. --stat --no-merges  # Show log of new commits after you fetched, with stats, excluding merges
+  log-me = !git log --author $(git config --includes user.email) # Show the log for my own user email
+  log-day = log --since yesterday # Show the recent day
+  log-refs = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
+  churn = !git log --all --find-copies --find-renames --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count\tfile"} {print $1 "\t" $2}' | sort -g  # show log of files that have many changes
+  lastchange = log -p --follow -n 1 # see last commit for particular file
+
+###############################################################################
+# Grep Aliases                                                              #
+###############################################################################
+
+  gg =  grep --break --heading --line-number
+  grep-all = !"f() { git rev-list --all | xargs git grep \"$@\"; }; f" # Find text in any commit ever
+
+###############################################################################
+# List Aliases                                                                #
+###############################################################################
+
+  tree = show-tree
+  list = ls-files
+  list-ignored = ls-files --others --i --exclude-standard # list files that git has ignored.
+
+###############################################################################
+# Shell Scripting Aliases                                                     #
+###############################################################################
+
+  aliases = "!git config -l | grep alias | cut -c 7-" # list git aliases
+  branch-name = rev-parse --abbrev-ref HEAD # Get the current branch name
+  upstream-name = !git for-each-ref --format='%(upstream:short)' $(git symbolic-ref -q HEAD) # Get name of the upstream branch
+  exec = ! exec # Execute shell scripts. Git always runs scripts in the top directory.
+  debug = !GIT_PAGER= gdb --args git # A 'debug' alias to help debugging builtins: when debugging builtins,
+
+###############################################################################
+# Advanced Aliases                                                            #
+###############################################################################
+
+  serve = "-c daemon.receivepack=true daemon --base-path=. --export-all --reuseaddr --verbose" # Serve the local directory by starting a git server daemon, so others can pull/push from my machine
+  rails-get = !"git pull --rebase; git submodule update --init --recursive; bundle check || bundle install; bundle exec rake db:migrate; bundle exec rake db:test:prepare" # Do everything we can to synchronize all changes for a Ruby On Rails app.

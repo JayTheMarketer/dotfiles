@@ -1,0 +1,3 @@
+#!/bin/sh
+# scan a specific port -- e.g. portscan 80
+sudo lsof -i ":$1"

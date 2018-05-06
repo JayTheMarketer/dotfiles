@@ -1,0 +1,108 @@
+#!/bin/sh
+
+# from `code --list-extensions`
+extensions=(
+  AndersEAndersen.html-class-suggestions
+  CoenraadS.bracket-pair-colorizer
+  DavidAnson.vscode-markdownlint
+  DotJoshJohnson.xml
+  EditorConfig.EditorConfig
+  HookyQR.minify
+  IBM.output-colorizer
+  KnisterPeter.vscode-github
+  P-de-Jong.vscode-html-scss
+  PKief.material-icon-theme
+  PeterJausovec.vscode-docker
+  TeddyDD.fish
+  WakaTime.vscode-wakatime
+  WallabyJs.quokka-vscode
+  Zignd.html-css-class-completion
+  aaron-bond.better-comments
+  abusaidm.html-snippets
+  adamvoss.yaml
+  akamud.vscode-theme-onedark
+  alefragnani.Bookmarks
+  alefragnani.project-manager
+  alexdima.copy-relative-path
+  anseki.vscode-color
+  bierner.color-info
+  bung87.rails
+  castwide.solargraph
+  cdsama.shell-snippets
+  christian-kohler.npm-intellisense
+  christian-kohler.path-intellisense
+  chrmarti.regex
+  cssho.vscode-svgviewer
+  dbaeumer.vscode-eslint
+  deerawan.vscode-dash
+  deerawan.vscode-faker
+  donjayamanne.githistory
+  donjayamanne.jquerysnippets
+  dzannotti.vscode-babel-coloring
+  eamodio.gitlens
+  ecmel.vscode-html-css
+  eg2.tslint
+  eg2.vscode-npm-script
+  esbenp.prettier-vscode
+  felixfbecker.php-debug
+  felixfbecker.php-intellisense
+  formulahendry.auto-close-tag
+  formulahendry.auto-rename-tag
+  formulahendry.code-runner
+  foxundermoon.shell-format
+  hdg.live-html-previewer
+  himanoa.Python-autopep8
+  hollowtree.vue-snippets
+  idleberg.icon-fonts
+  idleberg.textile
+  ikappas.phpcs
+  jinsihou.diff-tool
+  junstyle.php-cs-fixer
+  kohkimakimoto.vscode-mac-dictionary
+  lunaryorn.fish-ide
+  michaelnewton.textile-preview
+  mkaufman.HTMLHint
+  mrmlnc.vscode-autoprefixer
+  mrmlnc.vscode-scss
+  ms-python.python
+  ms-vscode.sublime-keybindings
+  msjsdiag.debugger-for-chrome
+  naumovs.color-highlight
+  octref.vetur
+  patrys.vscode-code-outline
+  pcanella.marko
+  pranaygp.vscode-css-peek
+  qezhu.gitlink
+  rbbit.typescript-hero
+  rebornix.Ruby
+  ritwickdey.live-sass
+  ritwickdey.LiveServer
+  robinbentley.sass-indented
+  ryu1kn.partial-diff
+  samverschueren.linter-xo
+  samverschueren.yo
+  shardulm94.trailing-spaces
+  shd101wyy.markdown-preview-enhanced
+  spywhere.guides
+  tanato.vscode-gulp
+  thekalinga.bootstrap4-vscode
+  timonwong.shellcheck
+  tomoki1207.pdf
+  vilicvane.es-quotes
+  wayou.vscode-todo-highlight
+  wmaurer.change-case
+  xabikos.JavaScriptSnippets
+  yzane.markdown-pdf
+)
+
+for variant in "code" "code-insiders"
+  do
+    if hash $variant 2>/dev/null; then
+      echo "Installing extensions for $variant"
+      for extension in "${extensions[@]}"
+        do
+          "$variant" --install-extension "$extension"
+        done
+    fi
+  done
+fi

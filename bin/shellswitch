@@ -1,0 +1,4 @@
+#!/bin/sh
+# `shellswitch [bash | zsh]` -- must be in /etc/shells already
+
+chsh -s $(brew --prefix)/bin/"$1"

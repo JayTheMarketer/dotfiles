@@ -1,0 +1,200 @@
+{
+  // Editor
+  "editor.fontFamily":
+    "'SauceCodePro Nerd Font', 'Consolas for Powerline', 'Mononoki Nerd Font', 'Fira Mono', Menlo",
+  "editor.fontLigatures": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.smoothScrolling": true,
+  "editor.wordWrap": "bounded",
+  "editor.wrappingIndent": "indent",
+  "editor.multiCursorModifier": "alt",
+  "editor.snippetSuggestions": "top",
+  "editor.renderControlCharacters": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.renderIndentGuides": false,
+  "editor.colorDecorators": false,
+  "editor.tabSize": 2,
+  "editor.matchBrackets": false,
+
+  // Workbench
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.swipeToNavigate": true,
+
+  // Window
+  "window.nativeTabs": true,
+
+  // Files
+  "files.insertFinalNewline": true,
+  "files.defaultLanguage": "markdown",
+
+  // Trailing Spaces
+  "trailing-spaces.trimOnSave": true,
+
+  // File Explorer
+  "explorer.sortOrder": "type",
+  "explorer.confirmDelete": false,
+
+  // Search
+  "search.exclude": {
+    "**/node_modules": false,
+    "**/bower_components": false
+  },
+  "search.quickOpen.includeSymbols": true,
+
+  // Debug
+  "debug.openExplorerOnEnd": true,
+
+  // Guides
+  "guides.active.gutter": true,
+  "guides.sendUsagesAndStats": false,
+
+  // HTML
+  "html.format.endWithNewline": true,
+  "html.format.extraLiners": "style, head, header, body, /html, /body",
+
+  // (S)CSS
+  "scss.lint.important": "warning",
+  "autoprefixer.formatOnSave": true,
+
+  // Markdown
+  "markdown.styles": [
+    "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
+  ],
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": true
+  },
+  "markdown-preview-enhanced.mermaidTheme": "mermaid.dark.css",
+
+  // Color Highlight
+  "color-highlight.matchWords": true,
+
+  // Terminal
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
+  "terminal.integrated.shell.osx": "fish",
+  "terminal.integrated.scrollback": 30000,
+
+  // Code-runner
+  "code-runner.runInTerminal": true,
+
+  // Problems
+  "problems.decorations.enabled": true,
+
+  // Telemetry
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+
+  // Auto Close Tag Config
+  "auto-close-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb"
+  ],
+  "auto-close-tag.SublimeText3Mode": true,
+
+  // Ruby
+  "ruby.lint": {
+    "rubocop": true,
+    "ruby": true // Runs ruby -wc
+  },
+
+  // Emmet
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "plaintext": "jade"
+  },
+
+  // NPM
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "npm.packageManager": "yarn",
+
+  // JavaScript
+  "xo.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.autoFixOnSave": true,
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.singleQuote": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+
+  // Typescript
+  "tslint.validateWithDefaultConfig": true,
+  "tslint.autoFixOnSave": true,
+  "tslint.packageManager": "yarn",
+
+  // Python
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+
+  // Shell
+  "shellformat.path": "shfmt",
+
+  // Git
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+
+  // Project Manager
+  "projectManager.git.baseFolders": [
+    "~/git-repos",
+    "~/dotfiles"
+  ],
+
+  // Live Server
+  "liveServer.settings.ChromeDebuggingAttachment": true,
+  "liveServer.settings.host": "localhost",
+
+  // Bracket Pair Colorizer
+  "bracketPairColorizer.forceIterationColorCycle": true,
+  "bracketPairColorizer.forceUniqueOpeningColor": true,
+  "bracketPairColorizer.highlightActiveScope": true,
+  "bracketPairColorizer.activeScopeCSS": [
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}; opacity: 0.5",
+    "backgroundColor : {color}"
+  ],
+
+  // File Associations
+  "files.associations": {
+    "*shell*": "shellscript",
+    "*zsh*": "shellscript",
+    "*zstyle*": "shellscript",
+    "*bash*": "shellscript",
+    "*zplug*": "shellscript",
+    "*vim*": "viml",
+    "*git*": "properties",
+    ".env": "properties",
+  },
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+}

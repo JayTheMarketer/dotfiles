@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+for file in ${DOTFILES}/**/path.sh; do
+  source $file
+done
+
+export PATH="$PATH:$BREW_PREFIX/opt/sqlite/bin" # SQLite
+export PATH="$PATH:$BREW_PREFIX/opt/curl/bin" # cURL replacement
+export PATH="$PATH:$BREW_PREFIX/opt/openssl/bin" # OpenSSL replacement
+export PATH="$PATH:$BREW_PREFIX/opt/findutils/libexec/gnubin" # gnu-findutils
+export PATH="$PATH:$BREW_PREFIX/opt/coreutils/libexec/gnubin" # gnu-coreutils
+export PATH="$PATH:$BREW_PREFIX/opt/gnu-getopt/bin" # gnu-getopt
+export PATH="$PATH:$BREW_PREFIX/opt/gnu-tar/libexec/gnubin" # gnu-tar

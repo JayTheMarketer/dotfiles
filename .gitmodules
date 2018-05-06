@@ -1,0 +1,12 @@
+[submodule "editor/vim"]
+	path = editor/vim
+	url = https://github.com/rafi/vim-config.git
+[submodule "tmux/tmux-config"]
+	path = tmux/tmux-config
+	url = https://github.com/samoshkin/tmux-config.git
+[submodule "ranger/plugins/ranger_devicons"]
+	path = ranger/plugins/ranger_devicons
+	url = https://github.com/alexanderjeurissen/ranger_devicons
+[submodule "scripts/dotbot"]
+	path = scripts/dotbot
+	url = https://github.com/anishathalye/dotbot

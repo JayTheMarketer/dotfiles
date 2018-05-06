@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# Highlights file content based on the filename extension.
+# If no highlighting method supported for given extension then it tries to guess it by looking for file content.
+#
+
+if [ ! -x "$(which pygmentize)" ]; then
+	echo "package 'pygmentize' is not installed!"
+	return 0
+fi
+
+if [ $# -eq 0 ]; then
+	pygmentize -O style=monokai -f console256 -g "$@"
+fi
+
+for FNAME in "$@"; do
+	filename=$(basename "$FNAME")
+	lexer=$(pygmentize -N "${filename}")
+	if [ "Z$lexer" != "Ztext" ]; then
+		pygmentize -l "$lexer" "$FNAME"
+	else
+		pygmentize -g "$FNAME"
+	fi
+done

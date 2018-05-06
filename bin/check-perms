@@ -1,0 +1,4 @@
+#!/bin/sh
+# check permissions on a file
+# usage: ex. check-perms /path/to/file
+stat -c %a "$1"

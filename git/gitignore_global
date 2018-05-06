@@ -1,0 +1,136 @@
+###############################
+#       Environment Vars      #
+###############################
+*.env
+*.venv
+*.local
+
+###############################
+#          Packages           #
+###############################
+vendor/
+dist/
+build/
+node_modules/
+bower_components/
+*.bundle
+*.map
+
+###############################
+#        OS Generated         #
+###############################
+.DS_Store
+.DS_Store?
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+dump.rdb
+
+###############################
+#          Temp Files         #
+###############################
+*~
+.#*
+.*.sw?
+.svn
+*.swp
+*.orig
+*.rbc
+
+###############################
+#       Compiled Source       #
+###############################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.dylib
+*.test
+*.out
+*.psd
+
+###############################
+#          Logs & DBs         #
+###############################
+*.log
+*.sql
+*.sqlite
+
+###############################
+#          IDE Files          #
+###############################
+.vscode/
+.sass-cache/
+*.codekit*
+*nbproject*
+*.~lock.*
+*.buildpath
+*.idea
+*.iml
+*.project
+*.settings
+*.classpath
+*.ruby-version
+*.node-version
+*.python-version
+*.go-version
+*.java-version
+
+###############################
+#        Toggl Project        #
+###############################
+*.toggl_project
+
+###############################
+#          Vim Files          #
+###############################
+state.vim
+*.un~
+*.swp
+*.sw*
+*.orig
+*.netrwhist
+
+###############################
+#          Compressed         #
+###############################
+# it's better to unpack these files and commit the raw source
+# git has its own built-in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+###############################
+#          Wordpress          #
+###############################
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+wp-config.php
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.*
+
+###############################
+#         Custom files        #
+###############################
+*.todo
+*.wtf
+.demo*

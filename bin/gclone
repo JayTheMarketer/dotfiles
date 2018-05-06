@@ -1,0 +1,14 @@
+#!/bin/sh
+# Usage: gclone "user/directory" "path/to/desired/location"
+
+repo=$1
+location=$2
+
+if [ "$#" -eq 2 ]; then
+  git clone "ssh://git@github.com/$repo" "$location"
+elif [ "$#" -eq 1 ]; then
+  git clone "ssh://git@github.com/$repo"
+else
+  echo 'Usage: gclone "user/directory" "path/to/desired/location"'
+fi
+

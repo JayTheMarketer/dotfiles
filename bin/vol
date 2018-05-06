@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# usage: ex. `volume 4`
+#
+osascript -e "set volume $1"

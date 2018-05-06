@@ -1,0 +1,61 @@
+# General Ack Settings
+####################################################################
+
+# only search with case sensitivity if there is mixed case
+--smart-case
+
+# follow symlinks
+--follow
+
+# Always sort the files
+--sort−files
+
+# Always color, even if piping to a another program
+--color
+
+# Ack Type Settings
+####################################################################
+
+
+# Plain Text
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
+
+# CSV
+--type-set=csv=.txt,.csv,.tsv
+
+# Ruby
+--type-set=slim=.slim
+--type-set=haml=.haml
+--type-set=rubytemplates=.slim,.erb
+--type-add=ruby=.haml,.rselm,.feature,.ru,.lock,.slim
+
+# CSS
+--type-add=css=.scss,.sass
+
+# Mustaches
+--type-set=mustache=.mustache,.mu,.handlebars,.hbs,.hbars
+
+# JS
+--type-add=js=.coffee
+
+# Jade
+--type-set=jade=.jade
+
+# Feature
+--type-set=feature=.feature
+
+# Ack Search Settings
+####################################################################
+
+# Don't search - dirs
+--ignore-dir=.tox
+--ignore-dir=node_modules
+--ignore-dir=log
+--ignore-dir=.idea
+--ignore-dir=bower_components
+--ignore-dir=target
+--ignore-dir=dist
+
+# Don't search - files
+--ignore-file=is:.tags
+--ignore-file=is:tags

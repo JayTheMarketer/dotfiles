@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$BREWBIN/node --no-deprecation "$@"

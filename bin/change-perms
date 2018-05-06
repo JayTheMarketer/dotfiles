@@ -1,0 +1,6 @@
+#!/bin/sh
+# Change all files or directories permissions recursively in a directory
+# usage: ex. change-perms f 644 (set all files to 644)
+# ex. change-perms d 755 (set all dirs to 755)
+
+find . -type "$1" ! -perm "$2" -print0 | xargs -0 chmod "$2"

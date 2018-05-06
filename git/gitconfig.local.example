@@ -1,0 +1,10 @@
+# User Credentials
+[user]
+  name = username
+  email = email
+  signingkey = ABCD123E
+[credential]
+  helper = osxkeychain
+  useHttpPath = true
+[gpg]
+  program = /usr/local/MacGPG2/bin/gpg

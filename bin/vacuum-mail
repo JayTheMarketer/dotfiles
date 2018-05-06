@@ -1,0 +1,14 @@
+#!/usr/bin/env osascript
+
+tell application "Mail" to quit
+set os_version to do shell script "sw_vers -productVersion"
+set mail_version to "V5"
+
+set sizeBefore to do shell script "ls -lnah ~/Library/Mail/" & mail_version & "/MailData | grep -E 'Envelope Index$' | awk {'print $5'}"
+do shell script "/usr/bin/sqlite3 ~/Library/Mail/" & mail_version & "/MailData/Envelope\\ Index vacuum"
+
+set sizeAfter to do shell script "ls -lnah ~/Library/Mail/" & mail_version & "/MailData | grep -E 'Envelope Index$' | awk {'print $5'}"
+
+display dialog ("Mail index before: " & sizeBefore & return & "Mail index after: " & sizeAfter & return & return & "Enjoy the new speed!")
+
+tell application "Mail" to activate

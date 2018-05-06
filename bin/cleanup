@@ -1,0 +1,4 @@
+#!/bin/sh
+# seek and destroy for any kind of file; i.e. `cleanup *.js` -- BE EXTREMELY CAREFUL WITH WILDCARDS
+
+find . -type f -name "$1" -ls -delete

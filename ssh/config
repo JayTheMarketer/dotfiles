@@ -1,0 +1,5 @@
+Host *
+  ServerAliveInterval 60
+  AddKeysToAgent yes
+
+Include ~/.ssh/config.local

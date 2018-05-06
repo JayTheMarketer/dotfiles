@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# .zshenv
+#
+# config for non-interactive and interactive instances.
+# Zsh loads this before loading .zshrc
+#
+# zsh startup sequence:
+#
+# >> .zshenv
+# .zprofile
+# .zshrc
+# .zlogin
+# .zlogout
+#
+# http://zsh.sourceforge.net/Intro/intro_3.html
+# http://wp.me/p1JkE-6S (shreevatsa.wordpress.com)
+###############################################################################
+
+###############################################################################
+# .shenv
+###############################################################################
+
+# Load environment if it hasn't already been.
+if [[ "${SHENV_LOADED}" != true ]]; then
+  source "${HOME}/.shenv"
+fi
