@@ -290,10 +290,10 @@ if [ -f "${DOTFILES}/shell/load_path" ]; then
   source "${DOTFILES}/shell/load_path"
 fi
 
-# Add `/usr/local/bin` to $PATH
-#
 # Make homebrew packages accessible
-export PATH="/usr/local/sbin:/usr/local/bin:${PATH}"
+export BREWBIN="$(brew --prefix)/bin"
+export BREWSBIN="$(brew --prefix)/sbin"
+export PATH="$BREWSBIN:$BREWBIN:$PATH"
 
 # Re-add `${HOME}/bin` to $PATH
 #
