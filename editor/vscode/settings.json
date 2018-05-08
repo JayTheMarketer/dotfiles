@@ -78,7 +78,7 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.enableBell": true,
   "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
-  "terminal.integrated.shell.osx": "fish",
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "terminal.integrated.scrollback": 30000,
 
   // Code-runner
@@ -156,11 +156,15 @@
   "python.linting.pylintEnabled": false,
 
   // Shell
-  "shellformat.path": "shfmt",
+  "shellformat.path": "/usr/local/bin/shfmt",
+  "shellcheck.executablePath": "/usr/local/bin/shellcheck",
 
   // Git
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
+
+  // YAML
+  "yaml.format.enable": true,
 
   // Project Manager
   "projectManager.git.baseFolders": [
@@ -170,7 +174,6 @@
 
   // Live Server
   "liveServer.settings.ChromeDebuggingAttachment": true,
-  "liveServer.settings.host": "localhost",
 
   // Bracket Pair Colorizer
   "bracketPairColorizer.forceIterationColorCycle": true,
@@ -196,5 +199,5 @@
   },
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
-  },
+  }
 }

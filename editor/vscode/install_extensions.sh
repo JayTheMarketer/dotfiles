@@ -19,7 +19,6 @@ extensions=(
   Zignd.html-css-class-completion
   aaron-bond.better-comments
   abusaidm.html-snippets
-  adamvoss.yaml
   akamud.vscode-theme-onedark
   alefragnani.Bookmarks
   alefragnani.project-manager
@@ -75,6 +74,7 @@ extensions=(
   qezhu.gitlink
   rbbit.typescript-hero
   rebornix.Ruby
+  redhat.vscode-yaml
   ritwickdey.live-sass
   ritwickdey.LiveServer
   robinbentley.sass-indented

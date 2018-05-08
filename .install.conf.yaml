@@ -1,0 +1,46 @@
+- defaults:
+  link:
+    create: true
+    relink: true
+    force: true
+
+- clean: ['~']
+
+- clean:
+  ~/.config:
+    force: true
+
+- link:
+  ~/bin: bin
+  ~/.editorconfig: editor/editorconfig
+  ~/.config/nvim: editor/vim
+  ~/Library/Application Support/Code/User/settings.json: editor/vscode/settings.json
+  ~/Library/Application Support/Code/User/keybindings.json: editor/vscode/keybindings.json
+  ~/Library/Application Support/Code/User/snippets: editor/vscode/snippets
+  ~/.gitconfig: git/gitconfig
+  ~/.gitignore_global: git/gitignore_global
+  ~/.gitattributes: git/gitattributes
+  ~/.gnupg/gpg.conf: gpg/gpg.conf
+  ~/.gnupg/pubring.gpg: gpg/pubring.gpg
+  ~/.config/brewfile/Brewfile: homebrew/Brewfile
+  ~/.composer/composer.json: php/composer.json
+  ~/.config/ranger: ranger
+  ~/.ackrc: shell/ackrc
+  ~/.dircolors: shell/dircolors
+  ~/.shenv: shell/shenv
+  ~/.config/youtube-dl/config: shell/youtube-dl.conf
+  ~/.bashrc: shell/bash/bashrc
+  ~/.bash_profile: shell/bash/bash_profile
+  ~/.zshrc: shell/zsh/zshrc
+  ~/.zshenv: shell/zsh/zshenv
+  ~/.config/fish/fish.config: shell/fish/fish.config
+  ~/.config/fish/fishfile: shell/fish/fishfile
+  ~/.config/fish/functions: shell/fish/functions
+  ~/.ssh/config: ssh/config
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [ln -sFn "~/.config/nvim" "~/.vim", Symlinking vim to neovim]
+  - [source "editor/vscode/install_extensions.sh", Installing VSCode extensions]
+  - [source golang/install.sh, Installing Golang]
+  - [source tmux/tmux-config/install.sh, Installing Tmux config]
