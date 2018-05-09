@@ -496,7 +496,7 @@
 			<key>Jira_Shortcuts</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:48:16Z</date>
+				<date>2018-05-07T13:01:57Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -1692,7 +1692,7 @@
 			<key>Scrivener</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:48:03Z</date>
+				<date>2018-05-07T13:01:56Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -3541,7 +3541,7 @@
 			<key>electron</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-02T15:41:58Z</date>
+				<date>2018-05-09T13:20:17Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -4671,7 +4671,7 @@
 			<key>http://kapeli.com/feeds/BackboneJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-02T22:27:32Z</date>
+				<date>2018-05-07T13:02:17Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bash.xml</key>
 			<dict>
@@ -4701,7 +4701,7 @@
 			<key>http://kapeli.com/feeds/Cappuccino.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-02T22:27:35Z</date>
+				<date>2018-05-07T13:02:28Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Chai.xml</key>
 			<dict>
@@ -4721,7 +4721,7 @@
 			<key>http://kapeli.com/feeds/CodeIgniter.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-02T22:27:37Z</date>
+				<date>2018-05-07T13:02:03Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/CoffeeScript.xml</key>
 			<dict>
@@ -4856,7 +4856,7 @@
 			<key>http://kapeli.com/feeds/MatPlotLib.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:49:33Z</date>
+				<date>2018-05-07T13:03:21Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Meteor.xml</key>
 			<dict>
@@ -4976,12 +4976,12 @@
 			<key>http://kapeli.com/feeds/Scala.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-02T22:27:34Z</date>
+				<date>2018-05-07T13:03:16Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SciPy.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:49:20Z</date>
+				<date>2018-05-07T13:03:00Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Stylus.xml</key>
 			<dict>
@@ -5031,7 +5031,7 @@
 			<key>http://kapeli.com/feeds/YUI.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-02T22:27:35Z</date>
+				<date>2018-05-07T13:02:47Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/jQuery.xml</key>
 			<dict>
@@ -5099,7 +5099,7 @@
 			<key>http://kapeli.com/feeds/Emacs_Lisp.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:48:03Z</date>
+				<date>2018-05-07T13:01:56Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Grails.xml</key>
 			<dict>
@@ -5199,7 +5199,7 @@
 			<key>http://kapeli.com/feeds/PrototypeJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:48:03Z</date>
+				<date>2018-05-07T13:01:56Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Python_2.xml</key>
 			<dict>
@@ -5209,7 +5209,7 @@
 			<key>http://kapeli.com/feeds/R.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:48:03Z</date>
+				<date>2018-05-07T13:01:56Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Ruby.xml</key>
 			<dict>
@@ -5300,7 +5300,7 @@
 		<key>keyCode</key>
 		<integer>49</integer>
 		<key>modifiers</key>
-		<integer>6144</integer>
+		<integer>2560</integer>
 	</dict>
 	<key>shouldRestoreTabs</key>
 	<false/>

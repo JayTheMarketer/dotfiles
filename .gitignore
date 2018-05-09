@@ -1,4 +1,5 @@
 .DS_Store
+homebrew/Brewfile
 dash/*.docset
 shell/fish/functions/_pisces_skip.fish
 shell/fish/functions/tail.fish
