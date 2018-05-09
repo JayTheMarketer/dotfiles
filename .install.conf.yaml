@@ -40,6 +40,9 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [cp homebrew/Brewfile_bootstrap homebrew/Brewfile, Setting up Brewfile]
+  - [brew install rcmdnk/file/brew-file, Installing Brewfile]
+  - [brew file install, Tapping + Pouring + Casking your Brewfile]
   - [ln -sFn "~/.config/nvim" "~/.vim", Symlinking vim to neovim]
   - [source "editor/vscode/install_extensions.sh", Installing VSCode extensions]
   - [source golang/install.sh, Installing Golang]
