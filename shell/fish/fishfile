@@ -2,7 +2,6 @@ edc/bass
 oh-my-fish/theme-bobthefish
 laughedelic/brew-completions
 decors/fish-colored-man
-fisherman/done
 fisherman/fishkit
 fisherman/fzf
 fisherman/get
@@ -12,7 +11,5 @@ fisherman/humanize_duration
 fisherman/menu
 fisherman/pipenv
 laughedelic/pisces
-fisherman/pyenv
-fisherman/rbenv
 oh-my-fish/plugin-thefuck
 fisherman/z
