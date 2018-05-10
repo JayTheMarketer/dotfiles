@@ -1,4 +1,4 @@
-function mand -d "Open a specified man page in Dash"
+function mand -d "Open a specified manpage in Dash"
   if [ (count $argv) -gt 0 ]
     open "dash://manpages:$argv"
   else

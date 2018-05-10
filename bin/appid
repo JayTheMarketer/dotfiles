@@ -1,0 +1,6 @@
+#!/usr/bin/env osascript
+#
+# usage: ex. `appid Mail` gets com.apple.mail`
+#
+
+osascript -e "id of app \"$argv\""

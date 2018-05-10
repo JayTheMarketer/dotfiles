@@ -1,4 +1,4 @@
-function dash --description 'Opens dash docs for the given query' --argument flag
+function dash --description 'Opens dash docs for the given query' --argument-names flag
   switch "$flag"
     case -h --help
       printf "Usage: dash QUERY\n\n"
@@ -15,4 +15,5 @@ function dash --description 'Opens dash docs for the given query' --argument fla
     open "dash://$argv[1]:$argv[2]"
   else
     open "dash://$argv"
+  end
 end

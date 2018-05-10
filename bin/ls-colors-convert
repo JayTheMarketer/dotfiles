@@ -1,7 +1,25 @@
+#!/usr/bin/env perl
 
-rectory
+use 5.010;
+
+use strict;
+use warnings;
+
+my $LS_COLORS = $ARGV[0] // $ENV{LS_COLORS}
+ // die "Please supply a colour spec to translate\n";
+
+say 'export LSCOLOR="', xlate_colour( $LS_COLORS ), '"';
+
+sub xlate_colour {
+  my $linux = shift;
+  my ( $bold, $fg, $bg );
+
+  my @attr = ( 'x' ) x 22;
+
+  my %bsd = (
+    'di' => 0,     # directory
     'ln' => 1,     # symbolic link
-    'so<Plug>(StopHL)<Plug>(StopHL)<Plug>(StopHL)<Plug>(StopHL)' => 2,     # socket
+    'so' => 2,     # socket
     'pi' => 3,     # pipe
     'ex' => 4,     # executable
     'bd' => 5,     # block special
@@ -79,4 +97,3 @@ rectory
 }
 
 # vim:ts=2:sw=2:sts=2:et:ft=perl
-
