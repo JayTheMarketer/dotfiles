@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+## Env variables
+export DOTFILES="${HOME}/dotfiles" # dotfile folder
+export ZPLUG_HOME="${HOME}/.zplug" # zplug root
+export GIT_HOME="${HOME}/git-repos"
+export PROJECT_PATHS=$GIT_HOME
+
+## Brew
+export BREW_PREFIX="/usr/local"
+export HOMEBREW_GITHUB_API_TOKEN='abcdefghijklmnopqrstuvwxyz1234567889101'
+
+## Tokens
+export GITHUB_TOKEN='abcdefghijklmnopqrstuvwxyz1234567889101'
+
+## PATH
+export PATH="$BREW_PREFIX/bin:$PATH" # ensure brew is on the path
+export PATH="$BREW_PREFIX/opt/sqlite/bin:$PATH" # SQLite
+export PATH="$BREW_PREFIX/opt/curl/bin:$PATH" # cURL replacement
+export PATH="$BREW_PREFIX/opt/openssl/bin:$PATH" # OpenSSL replacement
+export PATH="$BREW_PREFIX/opt/findutils/libexec/gnubin:$PATH" # gnu-findutils
+export PATH="$BREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH" # gnu-coreutils
+export PATH="$BREW_PREFIX/opt/gnu-getopt/bin:$PATH" # gnu-getopt
+export PATH="$BREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH" # gnu-tar

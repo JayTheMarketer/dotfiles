@@ -39,7 +39,7 @@ if which rbenv >/dev/null; then
   }
 
 else
-  RUBYPATH="/usr/bin/ruby"
+  RUBYPATH="$BREWBIN"
 fi
 
 echo $PATH | grep -q $RUBYPATH || export PATH=$RUBYPATH:$PATH

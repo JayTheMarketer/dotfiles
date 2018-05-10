@@ -291,8 +291,6 @@ if [ -f "${DOTFILES}/shell/load_path" ]; then
 fi
 
 # Make homebrew packages accessible
-export BREWBIN="$(brew --prefix)/bin"
-export BREWSBIN="$(brew --prefix)/sbin"
 export PATH="$BREWSBIN:$BREWBIN:$PATH"
 
 # Re-add `${HOME}/bin` to $PATH

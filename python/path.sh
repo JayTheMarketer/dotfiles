@@ -4,7 +4,6 @@
 if command -v pyenv >/dev/null; then
 
   PYTHONPATH=${HOME}/.pyenv/shims
-  export PATH=$PYTHONPATH:${PATH}
 
   __pyenv_started=0
 
@@ -30,4 +29,8 @@ if command -v pyenv >/dev/null; then
   	command pip "$@"
   }
 
+else
+  PYTHONPATH="$BREWBIN"
 fi
+
+echo $PATH | grep -q $PYTHONPATH || export PATH=$PYTHONPATH:$PATH
