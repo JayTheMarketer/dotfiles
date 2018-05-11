@@ -8,7 +8,7 @@ if which ruby >/dev/null; then
   alias gun="gem uninstall"
   alias gli="gem list"
   alias migrate='rake db:migrate'
-  alias gemup="update_rubygems; gem update --system; gem update; gem cleanup" # Update & cleanup ruby gems
+  alias gemup="gem update --system; gem update; gem cleanup" # Update & cleanup ruby gems
 fi
 
 if which rails >/dev/null; then
