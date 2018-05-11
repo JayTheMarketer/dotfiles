@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-## Env variables
-export DOTFILES="${HOME}/dotfiles" # dotfile folder
-export ZPLUG_HOME="${HOME}/.zplug" # zplug root
-export GIT_HOME="${HOME}/git-repos"
+# env variables
+export DOTFILES="/Users/schwartzj/dotfiles" # dotfile folder
+export ZPLUG_HOME="/Users/schwartzj/.zplug" # zplug root
+export GIT_HOME="/Users/schwartzj/git-repos"
 export PROJECT_PATHS=$GIT_HOME
 
-## Brew
+# brew
 export BREW_PREFIX="/usr/local"
 export HOMEBREW_GITHUB_API_TOKEN='abcdefghijklmnopqrstuvwxyz1234567889101'
 
-## Tokens
+# github
 export GITHUB_TOKEN='abcdefghijklmnopqrstuvwxyz1234567889101'
 
-## PATH
+# PATH
 export PATH="$BREW_PREFIX/bin:$PATH" # ensure brew is on the path
 export PATH="$BREW_PREFIX/opt/sqlite/bin:$PATH" # SQLite
 export PATH="$BREW_PREFIX/opt/curl/bin:$PATH" # cURL replacement
