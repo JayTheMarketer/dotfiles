@@ -7,3 +7,6 @@
 [submodule "scripts/dotbot"]
 	path = scripts/dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "editor/nvim"]
+	path = editor/nvim
+	url = git://github.com/rafi/vim-config.git
