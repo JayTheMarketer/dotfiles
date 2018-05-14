@@ -78,18 +78,22 @@ zplug "knu/z", \
 # https://git.io/vbHlg
 #
 zplug "zdharma/fast-syntax-highlighting", \
-  defer:2, \
-  on:"zsh-users/zsh-completions"
+  defer:2
 
-# clean-room implementation of the Fish shell's history search feature
+# zsh implementation of the Fish shell's history search feature
 # https://git.io/vbDxJ
 #
 zplug "zsh-users/zsh-history-substring-search", \
-  defer:3, \
-  on:"zdharma/fast-syntax-highlighting"
+  defer:3
 
 # make the shell more Bash compatible (including completions with bashcompinit)
 # https://git.io/vbDQt
 #
 zplug "chrissicool/zsh-bash", \
+  defer:3
+
+# fish-like fast/unobtrusive autosuggestions for zsh.
+# https://git.io/vbNux
+#
+zplug "zsh-users/zsh-autosuggestions", \
   defer:3
