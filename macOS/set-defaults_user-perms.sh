@@ -129,9 +129,8 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.apple.finder QuitMenuItem -bool true
 
 # Set Home as the default location for new Finder windows
-# For 'Recents', use `PfAf`
 # For other paths, use `PfLo` and `file:///full/path/here/`
-defaults write com.apple.finder NewWindowTarget -string "PfAf"
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
