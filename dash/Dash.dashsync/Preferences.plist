@@ -1728,7 +1728,7 @@
 			<key>koenbok/Framer</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-06T20:54:39Z</date>
+				<date>2018-05-17T13:31:22Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -1742,7 +1742,7 @@
 			<key>nuxt/docs</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-11T13:20:38Z</date>
+				<date>2018-05-17T13:31:15Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -1899,7 +1899,7 @@
 			<key>BigQuery_Standard_SQL</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-02T15:41:44Z</date>
+				<date>2018-05-17T13:30:12Z</date>
 				<key>entry</key>
 				<dict>
 					<key>authorLinkHref</key>
@@ -3541,7 +3541,7 @@
 			<key>electron</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-09T20:48:33Z</date>
+				<date>2018-05-17T13:30:32Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>

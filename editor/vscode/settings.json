@@ -199,5 +199,6 @@
   },
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
-  }
+  },
+  "gitlens.historyExplorer.enabled": true
 }
