@@ -20,6 +20,12 @@ osascript -e 'tell application "System Preferences" to quit'
 # General UI/UX                                                               #
 ###############################################################################
 
+# Use 24-hour time. Use the format EEE MMM d  HH:mm
+defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  HH:mm'
+
+# Use the dark theme
+defaults write ~/Library/Preferences/.GlobalPreferences AppleInterfaceStyle -string "Dark"
+
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
@@ -46,10 +52,16 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
+# Disable crash reporter
+defaults write com.apple.CrashReporter DialogType none
+
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
+
+# Disable mouse enlargement with jiggle
+# defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool true
 
 # Setting trackpad & mouse speed to a reasonable number
 defaults write -g com.apple.trackpad.scaling 3
@@ -323,6 +335,10 @@ defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 # Disable Java
 #defaults write com.apple.Safari WebKitJavaEnabled -bool false
 #defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
+
+# Disable javascript
+# defaults write ~/Library/Preferences/com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptEnabled -bool false
+# defaults write ~/Library/Preferences/com.apple.Safari WebKitJavaScriptEnabled -bool false
 
 # Block pop-up windows
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
