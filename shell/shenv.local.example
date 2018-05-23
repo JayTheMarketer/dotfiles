@@ -9,6 +9,7 @@ export PROJECT_PATHS=$GIT_HOME
 # brew
 export BREW_PREFIX="/usr/local"
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_UPGRADE_CLEANUP=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 export HOMEBREW_GITHUB_API_TOKEN='abcdefghijklmnopqrstuvwxyz1234567889101'
