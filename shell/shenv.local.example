@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # env variables
-export DOTFILES="/Users/schwartzj/dotfiles" # dotfile folder
-export ZPLUG_HOME="/Users/schwartzj/.zplug" # zplug root
-export GIT_HOME="/Users/schwartzj/git-repos"
+export DOTFILES="/Users/myUser/dotfiles" # dotfile folder
+export ZPLUG_HOME="/Users/myUser/.zplug" # zplug root
+export GIT_HOME="/Users/myUser/git-repos"
 export PROJECT_PATHS=$GIT_HOME
 
 # brew
