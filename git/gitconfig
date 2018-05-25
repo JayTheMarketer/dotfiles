@@ -27,9 +27,9 @@
   autoStash = true
   autoSquash = true
 [merge]
-  tool = vscode
+	tool = vscode
 [mergetool "vscode"]
-  cmd = code --wait $MERGED
+	cmd = code --wait $MERGED
   trustExitCode = true
   keepBackup = false
 [diff]
@@ -355,3 +355,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[user]
+	name = jschwrtz
+	email = jay.schwartz@sparkdemand.io
