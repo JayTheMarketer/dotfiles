@@ -18,6 +18,7 @@
   gpgsign = true
 [push]
   default = current
+  recurseSubmodules = on-demand
 [pull]
   rebase = true
 [branch]
