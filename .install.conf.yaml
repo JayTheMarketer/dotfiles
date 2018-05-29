@@ -26,6 +26,7 @@
   ~/.composer/composer.json: php/composer.json
   ~/.config/ranger: ranger
   ~/.ackrc: shell/ackrc
+  ~/.caniuse.json: shell/caniuse.json
   ~/.dircolors: shell/dircolors
   ~/.shenv: shell/shenv
   ~/.config/youtube-dl/config: shell/youtube-dl.conf
