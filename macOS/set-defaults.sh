@@ -22,6 +22,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -78,6 +79,21 @@ defaults write com.apple.CrashReporter DialogType none
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
+
+
+###############################################################################
+# Security                                                                    #
+###############################################################################
+
+# Enable system firewall
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+
+# Enable system firewall logging
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
+
+# Enable File Vault
+sudo fdesetup enable
+
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #

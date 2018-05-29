@@ -32,17 +32,14 @@ set --export theme_title_display_process 'yes'
 #    Aliases (shorthand functions)    #
 #######################################
 #
-alias e 'eval $EDITOR'
-alias rm 'rm -v'
+alias rm 'trash -v'
 alias cp 'cp -iv'
 alias mv 'mv -iv'
 alias mkdir 'mkdir -pv'
-alias rmdir 'rm -rfv'
+alias rmdir 'trash -v'
 alias vim 'nvim'
 alias vi 'nvim'
 alias less 'less -r'
-alias which 'which -a'
-alias rgrep 'grep --recursive'
 alias tree 'tree -C --dirsfirst'
 
 #######################################
