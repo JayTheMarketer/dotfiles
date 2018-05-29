@@ -87,6 +87,6 @@ if which brew >/dev/null; then
   }
 
   # Update & cleanup Homebrew, Cask, MAS, and their installed packages
-  alias brewup="brew update; brew outdated; brew upgrade --force-bottle --cleanup; brew cu -a -y; mas upgrade; brew cask cleanup; brew cleanup; brew prune; brew doctor"
+  alias brewup="brew update; brew outdated; brew upgrade --cleanup; brew cu --all --yes --cleanup --quiet; mas outdated; mas upgrade; brew cask cleanup; brew cleanup; brew prune; brew doctor;"
 
 fi

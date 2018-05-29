@@ -63,3 +63,4 @@ shell/fish/functions/__z_clean.fish
 shell/fish/functions/_pisces_append.fish
 shell/fish/functions/__fzf_find_file.fish
 shell/fish/functions/_pisces_remove.fish
+shell/fish/functions/__fzf_open.fish
