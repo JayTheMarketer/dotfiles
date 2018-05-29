@@ -14,7 +14,6 @@ extensions=(
   PKief.material-icon-theme
   PeterJausovec.vscode-docker
   TeddyDD.fish
-  WakaTime.vscode-wakatime
   WallabyJs.quokka-vscode
   Zignd.html-css-class-completion
   aaron-bond.better-comments
@@ -34,7 +33,6 @@ extensions=(
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   deerawan.vscode-dash
-  deerawan.vscode-faker
   donjayamanne.githistory
   donjayamanne.jquerysnippets
   dzannotti.vscode-babel-coloring
@@ -53,13 +51,10 @@ extensions=(
   himanoa.Python-autopep8
   hollowtree.vue-snippets
   idleberg.icon-fonts
-  idleberg.textile
   ikappas.phpcs
   jinsihou.diff-tool
   junstyle.php-cs-fixer
-  kohkimakimoto.vscode-mac-dictionary
   lunaryorn.fish-ide
-  michaelnewton.textile-preview
   mkaufman.HTMLHint
   mrmlnc.vscode-autoprefixer
   mrmlnc.vscode-scss
@@ -69,7 +64,6 @@ extensions=(
   naumovs.color-highlight
   octref.vetur
   patrys.vscode-code-outline
-  pcanella.marko
   pranaygp.vscode-css-peek
   qezhu.gitlink
   rbbit.typescript-hero
@@ -92,7 +86,6 @@ extensions=(
   wayou.vscode-todo-highlight
   wmaurer.change-case
   xabikos.JavaScriptSnippets
-  yzane.markdown-pdf
 )
 
 for variant in "code" "code-insiders"
