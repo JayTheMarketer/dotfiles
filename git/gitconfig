@@ -227,8 +227,8 @@
   save = stash save
   pop = stash pop
   snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}" # Take a snapshot of your current working tree without removing changes.
-  savepoint = !git add -A && git commit -m 'SAVEPOINT'
-  checkpoint = !git add -A && git commit -m 'SAVEPOINT' && git push
+  savepoint = !git add -A && git commit -m ':construction: SAVEPOINT'
+  checkpoint = !git add -A && git commit -m ':construction: SAVEPOINT' && git push
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard # commits everything in working directory and then does a hard reset.
   bomb = !sh -c "git reset --hard origin && git pull" # wipe everything -— use with caution
   nuke = !sh -c "~/.bin/git-nuke" # nukes a branch locally and on origin
