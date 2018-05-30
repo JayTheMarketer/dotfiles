@@ -133,14 +133,10 @@
   "npm.packageManager": "yarn",
 
   // JavaScript
-  "xo.enable": true,
+  "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
+  "eslint.packageManager": "yarn",
   "javascript.implicitProjectConfig.checkJs": true,
-
-  // Typescript
-  "tslint.validateWithDefaultConfig": true,
-  "tslint.autoFixOnSave": true,
-  "tslint.packageManager": "yarn",
 
   // Python
   "python.linting.flake8Enabled": true,
@@ -188,9 +184,5 @@
     "*git*": "properties",
     "*.env": "properties",
     "*.css": "css",
-  },
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
-  "gitlens.historyExplorer.enabled": true,
+  }
 }
