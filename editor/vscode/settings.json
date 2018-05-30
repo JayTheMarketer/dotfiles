@@ -133,10 +133,23 @@
   "npm.packageManager": "yarn",
 
   // JavaScript
+  "javascript.implicitProjectConfig.checkJs": true,
   "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
+  "eslint.enable": true,
   "eslint.packageManager": "yarn",
-  "javascript.implicitProjectConfig.checkJs": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue",
+      ".jsx"
+    ]
+  },
 
   // Python
   "python.linting.flake8Enabled": true,
@@ -149,6 +162,10 @@
   // Git
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
 
   // YAML
   "yaml.format.enable": true,

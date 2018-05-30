@@ -45,7 +45,6 @@ extensions=(
   formulahendry.code-runner
   foxundermoon.shell-format
   hdg.live-html-previewer
-  himanoa.Python-autopep8
   hollowtree.vue-snippets
   idleberg.icon-fonts
   ikappas.phpcs
