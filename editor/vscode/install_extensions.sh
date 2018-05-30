@@ -8,7 +8,6 @@ extensions=(
   DotJoshJohnson.xml
   EditorConfig.EditorConfig
   HookyQR.minify
-  IBM.output-colorizer
   KnisterPeter.vscode-github
   P-de-Jong.vscode-html-scss
   PKief.material-icon-theme
@@ -33,12 +32,10 @@ extensions=(
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   deerawan.vscode-dash
-  donjayamanne.githistory
   donjayamanne.jquerysnippets
   dzannotti.vscode-babel-coloring
   eamodio.gitlens
   ecmel.vscode-html-css
-  eg2.tslint
   eg2.vscode-npm-script
   esbenp.prettier-vscode
   felixfbecker.php-debug
@@ -65,23 +62,16 @@ extensions=(
   octref.vetur
   patrys.vscode-code-outline
   pranaygp.vscode-css-peek
-  qezhu.gitlink
-  rbbit.typescript-hero
   rebornix.Ruby
   redhat.vscode-yaml
-  ritwickdey.live-sass
   ritwickdey.LiveServer
-  robinbentley.sass-indented
   ryu1kn.partial-diff
-  samverschueren.linter-xo
-  samverschueren.yo
   shardulm94.trailing-spaces
   shd101wyy.markdown-preview-enhanced
   spywhere.guides
   tanato.vscode-gulp
   thekalinga.bootstrap4-vscode
   timonwong.shellcheck
-  tomoki1207.pdf
   vilicvane.es-quotes
   wayou.vscode-todo-highlight
   wmaurer.change-case
