@@ -77,14 +77,12 @@ extensions=(
   xabikos.JavaScriptSnippets
 )
 
-for variant in "code" "code-insiders"
-  do
-    if hash $variant 2>/dev/null; then
-      echo "Installing extensions for $variant"
-      for extension in "${extensions[@]}"
-        do
-          "$variant" --install-extension "$extension"
-        done
-    fi
-  done
-fi
+for variant in "code" "code-insiders"; do
+  if hash $variant 2>/dev/null; then
+    echo "Installing ${#extensions[@]} extensions for $variant"
+    for extension in "${extensions[@]}"; do
+      "$variant" --install-extension "$extension"
+    done
+  fi
+done
+
