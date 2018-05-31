@@ -12,6 +12,8 @@
 
 - link:
   ~/bin: bin
+  ~/.docker/config.json: docker/config.json
+  ~/.docker/daemon.json: docker/daemon.json
   ~/.editorconfig: editor/editorconfig
   ~/.config/nvim: editor/vim
   ~/Library/Application Support/Code/User/settings.json: editor/vscode/settings.json
