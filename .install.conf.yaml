@@ -45,6 +45,8 @@
   - [brew install rcmdnk/file/brew-file, Installing Brewfile]
   - [brew file install, Tapping + Pouring + Casking your Brewfile]
   - [ln -sFn "~/.config/nvim" "~/.vim", Symlinking vim to neovim]
+  - [cd ~/.config/nvim && ./venv.sh, Setting up neovim environment]
+  - [cd ~/.config/nvim && make test && make, Installing neovim plugins]
   - [source "editor/vscode/install_extensions.sh", Installing VSCode extensions]
   - [source golang/install.sh, Installing Golang]
   - [source tmux/tmux-config/install.sh, Installing Tmux config]

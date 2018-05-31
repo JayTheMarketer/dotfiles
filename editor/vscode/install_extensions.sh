@@ -12,7 +12,6 @@ extensions=(
   P-de-Jong.vscode-html-scss
   PKief.material-icon-theme
   PeterJausovec.vscode-docker
-  TeddyDD.fish
   WallabyJs.quokka-vscode
   Zignd.html-css-class-completion
   aaron-bond.better-comments
@@ -59,7 +58,6 @@ extensions=(
   msjsdiag.debugger-for-chrome
   naumovs.color-highlight
   octref.vetur
-  patrys.vscode-code-outline
   pranaygp.vscode-css-peek
   rebornix.Ruby
   redhat.vscode-yaml
