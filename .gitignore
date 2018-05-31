@@ -64,3 +64,14 @@ shell/fish/functions/_pisces_append.fish
 shell/fish/functions/__fzf_find_file.fish
 shell/fish/functions/_pisces_remove.fish
 shell/fish/functions/__fzf_open.fish
+shell/fish/functions/__bak.fish
+shell/fish/functions/__bak_help.fish
+shell/fish/functions/__bak_is_bak.fish
+shell/fish/functions/__bak_name.fish
+shell/fish/functions/__bak_normalized.fish
+shell/fish/functions/__bak_parse_help.fish
+shell/fish/functions/__bak_unbak.fish
+shell/fish/functions/cpbak.fish
+shell/fish/functions/mvbak.fish
+shell/fish/functions/uncpbak.fish
+shell/fish/functions/unmvbak.fish
