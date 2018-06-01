@@ -9,4 +9,4 @@
 	url = https://github.com/rafi/vim-config.git
 [submodule "tmux/tmux-config"]
 	path = tmux/tmux-config
-	url = https://github.com/jschwrtz/tmux-config
+	url = https://github.com/jschwrtz/tmux-config.git

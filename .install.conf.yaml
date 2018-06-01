@@ -51,4 +51,4 @@
   - [cd ~/.config/nvim && make test && make, Installing neovim plugins]
   - [source "editor/vscode/install_extensions.sh", Installing VSCode extensions]
   - [source golang/install.sh, Installing Golang]
-  - [source tmux/tmux-config/install.sh, Installing Tmux config]
+  - [source tmux/tmux-config/install.sh && ln -sfn tmux/tmux.conf ~/.tmux/tmux.conf, Installing Tmux config]
