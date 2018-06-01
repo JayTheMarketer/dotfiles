@@ -11,7 +11,6 @@ extensions=(
   KnisterPeter.vscode-github
   P-de-Jong.vscode-html-scss
   PKief.material-icon-theme
-  PeterJausovec.vscode-docker
   WallabyJs.quokka-vscode
   Zignd.html-css-class-completion
   aaron-bond.better-comments
@@ -22,12 +21,10 @@ extensions=(
   alexdima.copy-relative-path
   anseki.vscode-color
   bierner.color-info
-  bung87.rails
   castwide.solargraph
   cdsama.shell-snippets
   christian-kohler.npm-intellisense
   christian-kohler.path-intellisense
-  chrmarti.regex
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   deerawan.vscode-dash
@@ -44,7 +41,6 @@ extensions=(
   formulahendry.code-runner
   foxundermoon.shell-format
   hdg.live-html-previewer
-  hollowtree.vue-snippets
   idleberg.icon-fonts
   ikappas.phpcs
   jinsihou.diff-tool

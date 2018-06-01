@@ -201,5 +201,6 @@
     "*git*": "properties",
     "*.env": "properties",
     "*.css": "css",
-  }
+  },
+  "window.zoomLevel": 0
 }
