@@ -1,4 +1,4 @@
-{
+php{
 
 /*
 --------------------------------------
@@ -135,7 +135,10 @@
   // PHP
   "php.suggest.basic": false,
   "php.validate.run": "onType",
+  "phpcs.standard": "Wordpress",
   "phpcs.showSources": true,
+  "phpcbf.onsave": true,
+  "phpcbf.standard": "Wordpress",
 
   // Python
   "python.linting.flake8Enabled": true,
