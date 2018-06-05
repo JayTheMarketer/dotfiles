@@ -20,6 +20,7 @@ extensions=(
   alefragnani.project-manager
   alexdima.copy-relative-path
   anseki.vscode-color
+  attilabuti.vscode-mjml
   bierner.color-info
   castwide.solargraph
   cdsama.shell-snippets
@@ -28,6 +29,7 @@ extensions=(
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   deerawan.vscode-dash
+  digitalstreamio.mjml-syntax
   donjayamanne.jquerysnippets
   dzannotti.vscode-babel-coloring
   eamodio.gitlens
@@ -44,7 +46,6 @@ extensions=(
   idleberg.icon-fonts
   ikappas.phpcs
   jinsihou.diff-tool
-  junstyle.php-cs-fixer
   lunaryorn.fish-ide
   mkaufman.HTMLHint
   mrmlnc.vscode-autoprefixer
@@ -65,6 +66,7 @@ extensions=(
   tanato.vscode-gulp
   thekalinga.bootstrap4-vscode
   timonwong.shellcheck
+  tungvn.wordpress-snippet
   vilicvane.es-quotes
   wayou.vscode-todo-highlight
   wmaurer.change-case

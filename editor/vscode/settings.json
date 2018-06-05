@@ -1,5 +1,13 @@
 {
-  // Editor
+
+/*
+--------------------------------------
+------------ VS Code Core ------------
+--------------------------------------
+*/
+
+
+// Editor
   "editor.fontFamily":
     "'SauceCodePro Nerd Font', 'Consolas for Powerline', 'Mononoki Nerd Font', 'Fira Mono', Menlo",
   "editor.fontLigatures": true,
@@ -17,49 +25,79 @@
   "editor.tabSize": 2,
   "editor.matchBrackets": false,
 
-  // Workbench
+// Workbench
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.swipeToNavigate": true,
 
-  // Window
+// Window
   "window.nativeTabs": true,
 
-  // Files
+// Files
   "files.insertFinalNewline": true,
   "files.defaultLanguage": "markdown",
 
-  // Trailing Spaces
+// Trailing Spaces
   "trailing-spaces.trimOnSave": true,
 
-  // File Explorer
+// File Explorer
   "explorer.sortOrder": "type",
   "explorer.confirmDelete": false,
 
-  // Search
+// Search
   "search.exclude": {
     "**/node_modules": false,
     "**/bower_components": false
   },
   "search.quickOpen.includeSymbols": true,
 
-  // Debug
+// Debug
   "debug.openExplorerOnEnd": true,
 
-  // Guides
+// Guides
   "guides.active.gutter": true,
   "guides.sendUsagesAndStats": false,
 
-  // HTML
+// Terminal
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "terminal.integrated.scrollback": 30000,
+
+// File Associations
+  "files.associations": {
+    "*shell*": "shellscript",
+    "*zsh*": "shellscript",
+    "*zstyle*": "shellscript",
+    "*bash*": "shellscript",
+    "*zplug*": "shellscript",
+    "*vim*": "viml",
+    "*git*": "properties",
+    "*.env": "properties",
+    "*.css": "css",
+  },
+
+
+/*
+--------------------------------------
+------------- Languages --------------
+--------------------------------------
+*/
+
+
+// HTML
   "html.format.endWithNewline": true,
   "html.format.extraLiners": "style, head, header, body, /html, /body",
 
-  // (S)CSS
+// (S)CSS
   "scss.lint.important": "warning",
   "autoprefixer.formatOnSave": true,
 
-  // Markdown
+// Markdown
   "markdown.styles": [
     "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
   ],
@@ -69,29 +107,83 @@
   },
   "markdown-preview-enhanced.mermaidTheme": "mermaid.dark.css",
 
-  // Color Highlight
+// Ruby
+  "ruby.lint": {
+    "rubocop": true,
+    "ruby": true // Runs ruby -wc
+  },
+
+// JavaScript
+  "javascript.implicitProjectConfig.checkJs": true,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "eslint.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue",
+      ".jsx"
+    ]
+  },
+
+  // PHP
+  "php.validate.run": "onType",
+  "phpcs.showSources": true,
+
+  // Python
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+
+// Shell
+  "shellformat.path": "/usr/local/bin/shfmt",
+  "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+
+// YAML
+  "yaml.format.enable": true,
+
+
+/*
+--------------------------------------
+-------------- Plugins ---------------
+--------------------------------------
+*/
+
+
+// Git
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+
+// NPM
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "npm.packageManager": "yarn",
+
+
+// Color Highlight
   "color-highlight.matchWords": true,
 
-  // Terminal
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.enableBell": true,
-  "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  "terminal.integrated.scrollback": 30000,
-
-  // Code-runner
+// Code-runner
   "code-runner.runInTerminal": true,
 
-  // Problems
+// Problems
   "problems.decorations.enabled": true,
 
-  // Telemetry
+// Telemetry
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
 
-  // Auto Close Tag Config
+// Auto Close Tag Config
   "auto-close-tag.activationOnLanguage": [
     "html",
     "xml",
@@ -111,75 +203,25 @@
   ],
   "auto-close-tag.SublimeText3Mode": true,
 
-  // Ruby
-  "ruby.lint": {
-    "rubocop": true,
-    "ruby": true // Runs ruby -wc
-  },
+// Emmet
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "vue-html": "html",
+      "plaintext": "jade"
+    },
 
-  // Emmet
-  "emmet.showSuggestionsAsSnippets": true,
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "vue-html": "html",
-    "plaintext": "jade"
-  },
-
-  // NPM
-  "npm-intellisense.scanDevDependencies": true,
-  "npm-intellisense.packageSubfoldersIntellisense": true,
-  "npm-intellisense.showBuildInLibs": true,
-  "npm.packageManager": "yarn",
-
-  // JavaScript
-  "javascript.implicitProjectConfig.checkJs": true,
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
-  "eslint.enable": true,
-  "eslint.packageManager": "yarn",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "vue"
-  ],
-  "eslint.options": {
-    "extensions": [
-      ".js",
-      ".vue",
-      ".jsx"
-    ]
-  },
-
-  // Python
-  "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": false,
-
-  // Shell
-  "shellformat.path": "/usr/local/bin/shfmt",
-  "shellcheck.executablePath": "/usr/local/bin/shellcheck",
-
-  // Git
-  "git.enableCommitSigning": true,
-  "git.enableSmartCommit": true,
-  "gitlens.historyExplorer.enabled": true,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
-
-  // YAML
-  "yaml.format.enable": true,
-
-  // Project Manager
+// Project Manager
   "projectManager.git.baseFolders": [
     "~/git-repos",
     "~/dotfiles"
   ],
 
-  // Live Server
+// Live Server
   "liveServer.settings.ChromeDebuggingAttachment": true,
 
-  // Bracket Pair Colorizer
+// Bracket Pair Colorizer
   "bracketPairColorizer.forceIterationColorCycle": true,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
   "bracketPairColorizer.highlightActiveScope": true,
@@ -189,18 +231,4 @@
     "borderColor : {color}; opacity: 0.5",
     "backgroundColor : {color}"
   ],
-
-  // File Associations
-  "files.associations": {
-    "*shell*": "shellscript",
-    "*zsh*": "shellscript",
-    "*zstyle*": "shellscript",
-    "*bash*": "shellscript",
-    "*zplug*": "shellscript",
-    "*vim*": "viml",
-    "*git*": "properties",
-    "*.env": "properties",
-    "*.css": "css",
-  },
-  "window.zoomLevel": 0
 }
