@@ -4,6 +4,7 @@
         "wp-coding-standards/wpcs": "^0.14.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
         "laravel/installer": "^1.5",
-        "qa-tools/qa-tools": "^1.2"
+        "qa-tools/qa-tools": "^1.2",
+        "friendsofphp/php-cs-fixer": "^2.12"
     }
 }
