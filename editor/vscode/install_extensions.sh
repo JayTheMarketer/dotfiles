@@ -5,13 +5,12 @@ extensions=(
   AndersEAndersen.html-class-suggestions
   CoenraadS.bracket-pair-colorizer
   DavidAnson.vscode-markdownlint
-  DotJoshJohnson.xml
   EditorConfig.EditorConfig
   HookyQR.minify
   KnisterPeter.vscode-github
   P-de-Jong.vscode-html-scss
   PKief.material-icon-theme
-  WallabyJs.quokka-vscode
+  PeterJausovec.vscode-docker
   Zignd.html-css-class-completion
   aaron-bond.better-comments
   abusaidm.html-snippets
@@ -21,7 +20,9 @@ extensions=(
   alexdima.copy-relative-path
   anseki.vscode-color
   attilabuti.vscode-mjml
+  axosoft.gitkraken-glo
   bierner.color-info
+  bmewburn.vscode-intelephense-client
   castwide.solargraph
   cdsama.shell-snippets
   christian-kohler.npm-intellisense
@@ -31,6 +32,7 @@ extensions=(
   deerawan.vscode-dash
   digitalstreamio.mjml-syntax
   donjayamanne.jquerysnippets
+  DotJoshJohnson.xml
   dzannotti.vscode-babel-coloring
   eamodio.gitlens
   ecmel.vscode-html-css
@@ -50,11 +52,14 @@ extensions=(
   mkaufman.HTMLHint
   mrmlnc.vscode-autoprefixer
   mrmlnc.vscode-scss
+  ms-mssql.mssql
   ms-python.python
+  ms-vscode.Go
   ms-vscode.sublime-keybindings
   msjsdiag.debugger-for-chrome
   naumovs.color-highlight
   octref.vetur
+  persoderlind.vscode-phpcbf
   pranaygp.vscode-css-peek
   rebornix.Ruby
   redhat.vscode-yaml
@@ -68,6 +73,7 @@ extensions=(
   timonwong.shellcheck
   tungvn.wordpress-snippet
   vilicvane.es-quotes
+  WallabyJs.quokka-vscode
   wayou.vscode-todo-highlight
   wmaurer.change-case
   xabikos.JavaScriptSnippets
