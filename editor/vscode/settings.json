@@ -1,5 +1,4 @@
-php{
-
+{
 /*
 --------------------------------------
 ------------ VS Code Core ------------
@@ -96,6 +95,10 @@ php{
 // (S)CSS
   "scss.lint.important": "warning",
   "autoprefixer.formatOnSave": true,
+  "autoprefixer.browsers": [
+    "last 2 versions",
+    "> 5%"
+  ],
 
 // Markdown
   "markdown.styles": [
