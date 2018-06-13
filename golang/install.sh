@@ -20,7 +20,6 @@ if [ "$(command -v go)" ] && [ -n "$GOPATH" ]; then
     go get -u "$pkg"
   done
 
-  "$GOPATH"/bin/gometalinter --install --update
 fi
 
 export GOROOT=`go env GOROOT`
