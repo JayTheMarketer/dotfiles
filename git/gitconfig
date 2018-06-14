@@ -351,11 +351,3 @@
 
   serve = "-c daemon.receivepack=true daemon --base-path=. --export-all --reuseaddr --verbose" # Serve the local directory by starting a git server daemon, so others can pull/push from my machine
   rails-get = !"git pull --rebase; git submodule update --init --recursive; bundle check || bundle install; bundle exec rake db:migrate; bundle exec rake db:test:prepare" # Do everything we can to synchronize all changes for a Ruby On Rails app.
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[user]
-	name = jschwrtz
-	email = jay.schwartz@sparkdemand.io
