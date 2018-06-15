@@ -35,7 +35,7 @@
 
 // Files
   "files.insertFinalNewline": true,
-  "files.defaultLanguage": "markdown",
+  "files.defaultLanguage": "html",
 
 // Trailing Spaces
   "trailing-spaces.trimOnSave": true,

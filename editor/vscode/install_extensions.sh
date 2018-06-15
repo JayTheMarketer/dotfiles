@@ -45,6 +45,7 @@ extensions=(
   formulahendry.code-runner
   foxundermoon.shell-format
   hdg.live-html-previewer
+  humy2833.ftp-simple
   idleberg.icon-fonts
   ikappas.phpcs
   jinsihou.diff-tool
@@ -65,6 +66,13 @@ extensions=(
   redhat.vscode-yaml
   ritwickdey.LiveServer
   ryu1kn.partial-diff
+  salesforce.salesforcedx-vscode
+  salesforce.salesforcedx-vscode-apex
+  salesforce.salesforcedx-vscode-apex-debugger
+  salesforce.salesforcedx-vscode-apex-replay-debugger
+  salesforce.salesforcedx-vscode-core
+  salesforce.salesforcedx-vscode-lightning
+  salesforce.salesforcedx-vscode-visualforce
   shardulm94.trailing-spaces
   shd101wyy.markdown-preview-enhanced
   spywhere.guides
