@@ -136,11 +136,14 @@
   },
 
   // PHP
+  "[php]": {
+    "editor.insertSpaces": false,
+  },
   "php.suggest.basic": false,
   "php.validate.run": "onType",
   "phpcs.standard": "Wordpress",
   "phpcs.showSources": true,
-  "phpcbf.onsave": true,
+  "phpcbf.onsave": false,
   "phpcbf.standard": "Wordpress",
 
   // Python
