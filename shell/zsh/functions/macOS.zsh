@@ -298,7 +298,7 @@ function capwin() { # window to file
 alias updateall='sudo softwareupdate -i -a; brewup; yarnup; gemup; composeup'
 
 alias eject="diskutil eject"
-alias airport="system_profiler SPAirPortDataType"
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias top='TERM=vt100 top'
 alias reveal='open --reveal'
 
