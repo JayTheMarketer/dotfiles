@@ -25,6 +25,7 @@
   ~/.gnupg/gpg.conf: gpg/gpg.conf
   ~/.gnupg/pubring.gpg: gpg/pubring.gpg
   ~/.config/brewfile/Brewfile: homebrew/Brewfile
+  ~/Library/Safari/Extensions: macOS/safari/extensions
   ~/.composer/composer.json: php/composer.json
   ~/.config/ranger: ranger
   ~/.ackrc: shell/ackrc
