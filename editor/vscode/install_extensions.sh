@@ -7,7 +7,6 @@ extensions=(
   DavidAnson.vscode-markdownlint
   EditorConfig.EditorConfig
   HookyQR.minify
-  KnisterPeter.vscode-github
   P-de-Jong.vscode-html-scss
   PKief.material-icon-theme
   PeterJausovec.vscode-docker
@@ -27,6 +26,7 @@ extensions=(
   cdsama.shell-snippets
   christian-kohler.npm-intellisense
   christian-kohler.path-intellisense
+  chrmarti.regex
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   deerawan.vscode-dash
@@ -49,8 +49,10 @@ extensions=(
   idleberg.icon-fonts
   ikappas.phpcs
   jinsihou.diff-tool
+  KnisterPeter.vscode-github
   lunaryorn.fish-ide
   mkaufman.HTMLHint
+  mrmlnc.vscode-apache
   mrmlnc.vscode-autoprefixer
   mrmlnc.vscode-scss
   ms-mssql.mssql
@@ -62,6 +64,7 @@ extensions=(
   octref.vetur
   persoderlind.vscode-phpcbf
   pranaygp.vscode-css-peek
+  rbbit.typescript-hero
   rebornix.Ruby
   redhat.vscode-yaml
   ritwickdey.LiveServer
@@ -75,6 +78,7 @@ extensions=(
   salesforce.salesforcedx-vscode-visualforce
   shardulm94.trailing-spaces
   shd101wyy.markdown-preview-enhanced
+  skyapps.fish-vscode
   spywhere.guides
   tanato.vscode-gulp
   thekalinga.bootstrap4-vscode

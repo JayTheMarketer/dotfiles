@@ -241,4 +241,5 @@
     "borderColor : {color}; opacity: 0.5",
     "backgroundColor : {color}"
   ],
+  "gitlens.keymap": "alternate",
 }
