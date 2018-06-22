@@ -75,3 +75,4 @@ shell/fish/functions/cpbak.fish
 shell/fish/functions/mvbak.fish
 shell/fish/functions/uncpbak.fish
 shell/fish/functions/unmvbak.fish
+macOS/safari/extensions/Extensions.plist
