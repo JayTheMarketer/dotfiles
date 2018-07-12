@@ -3,12 +3,10 @@
 # from `code --list-extensions`
 extensions=(
   AndersEAndersen.html-class-suggestions
-  CoenraadS.bracket-pair-colorizer
   DavidAnson.vscode-markdownlint
   EditorConfig.EditorConfig
   HookyQR.minify
   P-de-Jong.vscode-html-scss
-  PKief.material-icon-theme
   PeterJausovec.vscode-docker
   Zignd.html-css-class-completion
   aaron-bond.better-comments
@@ -19,14 +17,13 @@ extensions=(
   alexdima.copy-relative-path
   anseki.vscode-color
   attilabuti.vscode-mjml
-  axosoft.gitkraken-glo
   bierner.color-info
-  bmewburn.vscode-intelephense-client
   castwide.solargraph
   cdsama.shell-snippets
   christian-kohler.npm-intellisense
   christian-kohler.path-intellisense
   chrmarti.regex
+  CoenraadS.bracket-pair-colorizer
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   deerawan.vscode-dash
@@ -52,7 +49,6 @@ extensions=(
   KnisterPeter.vscode-github
   lunaryorn.fish-ide
   mkaufman.HTMLHint
-  mrmlnc.vscode-apache
   mrmlnc.vscode-autoprefixer
   mrmlnc.vscode-scss
   ms-mssql.mssql
@@ -63,19 +59,13 @@ extensions=(
   naumovs.color-highlight
   octref.vetur
   persoderlind.vscode-phpcbf
+  PKief.material-icon-theme
   pranaygp.vscode-css-peek
   rbbit.typescript-hero
   rebornix.Ruby
   redhat.vscode-yaml
   ritwickdey.LiveServer
   ryu1kn.partial-diff
-  salesforce.salesforcedx-vscode
-  salesforce.salesforcedx-vscode-apex
-  salesforce.salesforcedx-vscode-apex-debugger
-  salesforce.salesforcedx-vscode-apex-replay-debugger
-  salesforce.salesforcedx-vscode-core
-  salesforce.salesforcedx-vscode-lightning
-  salesforce.salesforcedx-vscode-visualforce
   shardulm94.trailing-spaces
   shd101wyy.markdown-preview-enhanced
   skyapps.fish-vscode
