@@ -242,4 +242,5 @@
     "backgroundColor : {color}"
   ],
   "gitlens.keymap": "alternate",
+  "git.autofetch": true,
 }

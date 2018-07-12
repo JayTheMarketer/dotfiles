@@ -28,9 +28,9 @@
   autoStash = true
   autoSquash = true
 [merge]
-	tool = vscode
+  tool = vscode
 [mergetool "vscode"]
-	cmd = code --wait $MERGED
+  cmd = code --wait $MERGED
   trustExitCode = true
   keepBackup = false
 [diff]
