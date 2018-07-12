@@ -243,4 +243,5 @@
   ],
   "gitlens.keymap": "alternate",
   "git.autofetch": true,
+  "git.confirmSync": false,
 }
