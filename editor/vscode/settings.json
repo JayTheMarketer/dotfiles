@@ -128,7 +128,6 @@
 
 // (S)CSS
   "scss.lint.important": "warning",
-  "autoprefixer.formatOnSave": true,
   "autoprefixer.browsers": [
     "last 2 versions",
     "> 5%"
@@ -153,7 +152,6 @@
 // JavaScript
   "javascript.implicitProjectConfig.checkJs": true,
   "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
   "eslint.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.validate": [
@@ -202,6 +200,8 @@
 // Git
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
   "gitlens.historyExplorer.enabled": true,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
@@ -274,8 +274,5 @@
     "borderWidth : 1px",
     "borderColor : {color}; opacity: 0.5",
     "backgroundColor : {color}"
-  ],
-  "gitlens.keymap": "alternate",
-  "git.autofetch": true,
-  "git.confirmSync": false,
+  ]
 }
