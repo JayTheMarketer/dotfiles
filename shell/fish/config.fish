@@ -47,23 +47,38 @@ alias tree 'tree -C --dirsfirst'
 #            Shell Programs           #
 #######################################
 
-# hub
+# hub -- https://github.com/github/hub
+#
 if type -q hub
   eval (hub alias -s)
   complete -c hub -w git
 else
-  echo "Please install 'hub' first!"
+  echo 'installing `hub`...'
+  eval (hub alias -s)
+  complete -c hub -w gi
 end
 
-# pygmentize support
+# pygmentize -- http://pygments.org/docs/cmdline/
+#
 if type -q colorize # see $DOTFILES/bin
   alias c 'colorize'
 else
   alias c 'pygmentize -O style=monokai -f console256 -g'
 end
 
+# colorls -- https://github.com/athityakumar/colorls
+#
+if type -q colorls
+  alias lc 'colorls --long --almost-all --sort-dirs --git-status'
+else
+  echo 'installing `colorls`...'
+  gem install colorls
+  alias lc 'colorls --long --almost-all --sort-dirs --git-status'
+end
+
 # OSX command-not-found support
 # https://github.com/Homebrew/homebrew-command-not-found
+#
 if type -q brew
   brew command command-not-found-init > /dev/null 2>&1; and source (brew command-not-found-init)
 end

@@ -151,7 +151,6 @@
 
 // JavaScript
   "javascript.implicitProjectConfig.checkJs": true,
-  "prettier.eslintIntegration": true,
   "eslint.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.validate": [
@@ -196,7 +195,6 @@
 --------------------------------------
 */
 
-
 // Git
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
@@ -213,6 +211,11 @@
   "npm-intellisense.showBuildInLibs": true,
   "npm.packageManager": "yarn",
 
+// Prettier
+  "prettier.eslintIntegration": true,
+  "prettier.arrowParens": "always",
+  "prettier.trailingComma": "all",
+  "prettier.stylelintIntegration": true,
 
 // Color Highlight
   "color-highlight.matchWords": true,
@@ -248,13 +251,14 @@
   "auto-close-tag.SublimeText3Mode": true,
 
 // Emmet
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.includeLanguages": {
-      "javascript": "javascriptreact",
-      "vue-html": "html",
-      "plaintext": "jade"
-    },
+  "html-css-class-completion.enableEmmetSupport": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "plaintext": "jade"
+  },
 
 // Project Manager
   "projectManager.git.baseFolders": [
@@ -274,5 +278,6 @@
     "borderWidth : 1px",
     "borderColor : {color}; opacity: 0.5",
     "backgroundColor : {color}"
-  ]
+  ],
+  "liveServer.settings.donotShowInfoMsg": true
 }
