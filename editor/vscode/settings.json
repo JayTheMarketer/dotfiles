@@ -279,5 +279,10 @@
     "borderColor : {color}; opacity: 0.5",
     "backgroundColor : {color}"
   ],
-  "liveServer.settings.donotShowInfoMsg": true
+
+// Write-good
+  "write-good.languages": [
+    "markdown",
+    "plaintext"
+  ]
 }
