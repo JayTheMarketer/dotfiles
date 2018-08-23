@@ -267,7 +267,7 @@
   ],
 
 // Live Server
-  "liveServer.settings.ChromeDebuggingAttachment": true,
+"liveServer.settings.host": "localhost",
 
 // Bracket Pair Colorizer
   "bracketPairColorizer.forceIterationColorCycle": true,
