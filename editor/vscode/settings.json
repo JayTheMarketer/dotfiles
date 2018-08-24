@@ -24,7 +24,7 @@
   "editor.matchBrackets": false,
 
 // Workbench
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.swipeToNavigate": true,
