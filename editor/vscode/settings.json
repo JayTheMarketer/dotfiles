@@ -7,7 +7,7 @@
 
 // Editor
   "editor.fontFamily":
-    "'SauceCodePro Nerd Font', 'Consolas for Powerline', 'Mononoki Nerd Font', 'Fira Mono', Menlo",
+    "'FuraCode Nerd Font', 'SauceCodePro Nerd Font', 'Inconsolata Nerd Font', Menlo",
   "editor.fontLigatures": true,
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
