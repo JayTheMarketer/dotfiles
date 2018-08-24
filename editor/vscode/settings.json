@@ -1,13 +1,19 @@
 {
-/*
---------------------------------------
------------- VS Code Core ------------
---------------------------------------
-*/
+
+/* ###################################
+#                                    #
+#            VS Code Core            #
+#                                    #
+################################### */
+
+// Workbench
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.swipeToNavigate": true,
 
 // Editor
-  "editor.fontFamily":
-    "'FuraCode Nerd Font', 'SauceCodePro Nerd Font', 'Inconsolata Nerd Font', Menlo",
+  "editor.fontFamily": "'FuraCode Nerd Font', 'SauceCodePro Nerd Font', 'Inconsolata Nerd Font', Menlo",
   "editor.fontLigatures": true,
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
@@ -22,12 +28,8 @@
   "editor.colorDecorators": false,
   "editor.tabSize": 2,
   "editor.matchBrackets": false,
-
-// Workbench
-  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.swipeToNavigate": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
 
 // Window
   "window.nativeTabs": true,
@@ -36,8 +38,9 @@
   "files.insertFinalNewline": true,
   "files.defaultLanguage": "html",
 
-// Trailing Spaces
-  "trailing-spaces.trimOnSave": true,
+// Extensions
+  "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
 
 // File Explorer
   "explorer.sortOrder": "type",
@@ -62,86 +65,35 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.enableBell": true,
-  "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
+  "terminal.integrated.fontFamily": "FuraCode Nerd Font",
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "terminal.integrated.scrollback": 30000,
 
-// File Associations
-  "files.associations": {
-    "*shell*": "shellscript",
-    "*zsh*": "shellscript",
-    "*zstyle*": "shellscript",
-    "*bash*": "shellscript",
-    "*zplug*": "shellscript",
-    "*vim*": "viml",
-    "*git*": "properties",
-    "*.env": "properties",
-    "*.css": "css",
-  },
-
-// Better Comments
-  "better-comments.highlightPlainText": true,
-  "better-comments.tags": [
-    {
-      "tag": "!",
-      "color": "#FF2D00",
-      "strikethrough": false,
-      "backgroundColor": "transparent"
-    },
-    {
-      "tag": "?",
-      "color": "#3498DB",
-      "strikethrough": false,
-      "backgroundColor": "transparent"
-    },
-    {
-      "tag": "//",
-      "color": "#FFFFFF",
-      "strikethrough": true,
-      "backgroundColor": "transparent"
-    },
-    {
-      "tag": "todo",
-      "color": "#FF8C00",
-      "strikethrough": false,
-      "backgroundColor": "transparent"
-    },
-    {
-      "tag": "*",
-      "color": "#98C379",
-      "strikethrough": false,
-      "backgroundColor": "transparent"
-    }
-  ],
-
-
-/*
---------------------------------------
-------------- Languages --------------
---------------------------------------
-*/
-
+/* ###################################
+#                                    #
+#             Languages              #
+#                                    #
+################################### */
 
 // HTML
   "html.format.endWithNewline": true,
   "html.format.extraLiners": "style, head, header, body, /html, /body",
 
 // (S)CSS
-  "scss.lint.important": "warning",
-  "autoprefixer.browsers": [
-    "last 2 versions",
-    "> 5%"
-  ],
+  "css.validate": false, // disable in favor of stylelint
+  "less.validate": false, // disable in favor of stylelint
+  "scss.validate": false, // disable in favor of stylelint
+  "autoprefixer.browsers": ["last 2 versions", "> 5%"],
 
 // Markdown
-  "markdown.styles": [
-    "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
-  ],
   "[markdown]": {
     "editor.wordWrap": "on",
     "editor.quickSuggestions": true
   },
   "markdown-preview-enhanced.mermaidTheme": "mermaid.dark.css",
+  "markdown.styles": [
+    "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
+  ],
 
 // Ruby
   "ruby.lint": {
@@ -150,34 +102,33 @@
   },
 
 // JavaScript
+  "[javascript]": {
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.useTabStops": false
+  },
   "javascript.implicitProjectConfig.checkJs": true,
   "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "vue"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
   "eslint.options": {
-    "extensions": [
-      ".js",
-      ".vue",
-      ".jsx"
-    ]
+    "extensions": [".js", ".vue", ".jsx"]
   },
 
-  // PHP
+// PHP
   "[php]": {
-    "editor.insertSpaces": false,
+    "editor.detectIndentation": true,
+    "editor.useTabStops": true,
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": false
   },
   "php.suggest.basic": false,
   "php.validate.run": "onType",
-  "phpcs.standard": "Wordpress",
+  "phpcs.standard": "Wordpress-Core",
   "phpcs.showSources": true,
-  "phpcbf.onsave": false,
-  "phpcbf.standard": "Wordpress",
 
-  // Python
+// Python
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
 
@@ -188,12 +139,26 @@
 // YAML
   "yaml.format.enable": true,
 
+// JSON
+  "[json]": {
+    "editor.formatOnSave": false
+  },
 
-/*
---------------------------------------
--------------- Plugins ---------------
---------------------------------------
-*/
+// JSON with Comments
+  "[jsonc]": {
+    "editor.formatOnSave": false
+  },
+
+// XML
+  "[xml]": {
+    "editor.formatOnSave": false
+  },
+
+/* ###################################
+#                                    #
+#              Plugins               #
+#                                    #
+################################### */
 
 // Git
   "git.enableCommitSigning": true,
@@ -212,10 +177,10 @@
   "npm.packageManager": "yarn",
 
 // Prettier
-  "prettier.eslintIntegration": true,
-  "prettier.arrowParens": "always",
-  "prettier.trailingComma": "all",
   "prettier.stylelintIntegration": true,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.disableLanguages": [],
 
 // Color Highlight
   "color-highlight.matchWords": true,
@@ -261,13 +226,13 @@
   },
 
 // Project Manager
-  "projectManager.git.baseFolders": [
-    "~/git-repos",
-    "~/dotfiles"
-  ],
+  "projectManager.git.baseFolders": ["~/git-repos", "~/dotfiles"],
 
 // Live Server
-"liveServer.settings.host": "localhost",
+  "liveServer.settings.host": "localhost",
+
+// Trailing Spaces
+  "trailing-spaces.trimOnSave": true,
 
 // Bracket Pair Colorizer
   "bracketPairColorizer.forceIterationColorCycle": true,
@@ -281,8 +246,37 @@
   ],
 
 // Write-good
-  "write-good.languages": [
-    "markdown",
-    "plaintext"
+  "write-good.languages": ["markdown", "plaintext"],
+
+// Better Comments
+  "better-comments.highlightPlainText": true,
+  "better-comments.tags": [
+    {
+      "tag": "//",
+      "color": "#4b5760",
+      "strikethrough": true,
+    },
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+    },
+    {
+      "tag": "*",
+      "color": "#b478ed",
+    },
+    {
+      "tag": "TODO",
+      "color": "#4b5760",
+      "backgroundColor": "#FF8C00"
+    },
+    {
+      "tag": "FIXME",
+      "color": "#4b5760",
+      "backgroundColor": "#FF2D00"
+    },
   ]
 }

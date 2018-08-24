@@ -6,6 +6,7 @@ if which brew >/dev/null; then
   alias brewc='brew cleanup'
   alias brewC='brew cleanup --force'
   alias brewi='brew install'
+  alias brewin='brew info'
   alias brewl='brew list'
   alias brewo='brew outdated'
   alias brews='brew search'
@@ -14,9 +15,8 @@ if which brew >/dev/null; then
 
   # Homebrew Cask
   alias cask='brew cask'
-  alias caskc='brew cask cleanup --outdated'
-  alias caskC='brew cask cleanup'
   alias caski='brew cask install'
+  alias caskin='brew cask info'
   alias caskl='brew cask list'
   alias casko='brew cask outdated'
   alias casks='brew cask search'
@@ -87,6 +87,6 @@ if which brew >/dev/null; then
   }
 
   # Update & cleanup Homebrew, Cask, MAS, and their installed packages
-  alias brewup="brew update; brew outdated; brew upgrade --cleanup; brew cu --all --yes --cleanup --quiet; mas outdated; mas upgrade; brew cask cleanup; brew cleanup; brew prune; brew doctor;"
+  alias brewup="brew update; brew outdated; brew upgrade --cleanup; brew cu --all --yes --cleanup --quiet; mas outdated; mas upgrade; brew cleanup; brew prune; brew doctor;"
 
 fi
