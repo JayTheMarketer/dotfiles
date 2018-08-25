@@ -1,19 +1,23 @@
 {
+  /*
+!---------------------------------------!
+?----------------VS Core----------------?
+!---------------------------------------!
+*/
 
-/* ###################################
-#                                    #
-#            VS Code Core            #
-#                                    #
-################################### */
-
-// Workbench
+  // Workbench
   "workbench.colorTheme": "Oceanic Next (dimmed bg)",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.swipeToNavigate": true,
 
+<<<<<<< Updated upstream
 // Editor
   "editor.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
+=======
+  // Editor
+  "editor.fontFamily": "'Fira Code iScript', 'FuraCode Nerd Font', 'SauceCodePro Nerd Font', 'Inconsolata Nerd Font', Menlo",
+>>>>>>> Stashed changes
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.scrollBeyondLastLine": false,
@@ -31,37 +35,80 @@
   "editor.matchBrackets": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "emphasis",
+          "comment",
+          "keyword.control",
+          "keyword.operator.expression.delete",
+          "variable.language",
 
-// Window
+          // "comment",
+          // "punctuation.definition.comment",
+          // "keyword",
+          // "storage",
+          // "keyword.control",
+          // "entity.other.attribute-name",
+          // "entity.name.method.js",
+          // "entity.name.type.class",
+          // "variable.language",
+          "entity.other.attribute-name.tag.jade",
+          "entity.other.attribute-name.tag.pug",
+          "entity.other.attribute-name.html",
+          "entity.other.attribute-name",
+          // "tag.decorator.js entity.name.tag.js",
+          // "tag.decorator.js punctuation.definition.tag.js",
+          // "source.js constant.other.object.key.js string.unquoted.label.js",
+          // "markup.italic",
+          // "markup.bold markup.italic",
+          // "markup.italic markup.bold",
+          // "markup.quote markup.bold",
+          // "markup.bold markup.italic string",
+          // "markup.italic markup.bold string",
+          // "markup.quote markup.bold string",
+          // "markup.quote",
+          // "entity.name.function",
+          // "support.function"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+
+  // Window
   "window.nativeTabs": true,
 
-// Files
+  // Files
   "files.insertFinalNewline": true,
   "files.defaultLanguage": "html",
 
-// Extensions
+  // Extensions
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
 
-// File Explorer
+  // File Explorer
   "explorer.sortOrder": "type",
   "explorer.confirmDelete": false,
 
-// Search
+  // Search
   "search.exclude": {
     "**/node_modules": false,
     "**/bower_components": false
   },
   "search.quickOpen.includeSymbols": true,
 
-// Debug
+  // Debug
   "debug.openExplorerOnEnd": true,
 
-// Guides
+  // Guides
   "guides.active.gutter": true,
   "guides.sendUsagesAndStats": false,
 
-// Terminal
+  // Terminal
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
@@ -70,23 +117,23 @@
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "terminal.integrated.scrollback": 30000,
 
-/* ###################################
-#                                    #
-#             Languages              #
-#                                    #
-################################### */
+  /*
+!---------------------------------------!
+?---------------Languages---------------?
+!---------------------------------------!
+*/
 
-// HTML
+  // HTML
   "html.format.endWithNewline": true,
   "html.format.extraLiners": "style, head, header, body, /html, /body",
 
-// (S)CSS
+  // (S)CSS
   "css.validate": false, // disable in favor of stylelint
   "less.validate": false, // disable in favor of stylelint
   "scss.validate": false, // disable in favor of stylelint
   "autoprefixer.browsers": ["last 2 versions", "> 5%"],
 
-// Markdown
+  // Markdown
   "[markdown]": {
     "editor.wordWrap": "on",
     "editor.quickSuggestions": true
@@ -96,13 +143,13 @@
     "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
   ],
 
-// Ruby
+  // Ruby
   "ruby.lint": {
     "rubocop": true,
     "ruby": true // Runs ruby -wc
   },
 
-// JavaScript
+  // JavaScript
   "[javascript]": {
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
@@ -117,7 +164,7 @@
     "extensions": [".js", ".vue", ".jsx"]
   },
 
-// PHP
+  // PHP
   "[php]": {
     "editor.detectIndentation": true,
     "editor.useTabStops": true,
@@ -129,39 +176,39 @@
   "phpcs.standard": "Wordpress-Core",
   "phpcs.showSources": true,
 
-// Python
+  // Python
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
 
-// Shell
+  // Shell
   "shellformat.path": "/usr/local/bin/shfmt",
   "shellcheck.executablePath": "/usr/local/bin/shellcheck",
 
-// YAML
+  // YAML
   "yaml.format.enable": true,
 
-// JSON
+  // JSON
   "[json]": {
     "editor.formatOnSave": false
   },
 
-// JSON with Comments
+  // JSON with Comments
   "[jsonc]": {
     "editor.formatOnSave": false
   },
 
-// XML
+  // XML
   "[xml]": {
     "editor.formatOnSave": false
   },
 
-/* ###################################
-#                                    #
-#              Plugins               #
-#                                    #
-################################### */
+  /*
+!---------------------------------------!
+?----------------Plugins----------------?
+!---------------------------------------!
+*/
 
-// Git
+  // Git
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.autofetch": true,
@@ -171,32 +218,32 @@
     "suppressShowKeyBindingsNotice": true
   },
 
-// NPM
+  // NPM
   "npm-intellisense.scanDevDependencies": true,
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.showBuildInLibs": true,
   "npm.packageManager": "yarn",
 
-// Prettier
+  // Prettier
   "prettier.stylelintIntegration": true,
   "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
   "prettier.disableLanguages": [],
 
-// Color Highlight
+  // Color Highlight
   "color-highlight.matchWords": true,
 
-// Code-runner
+  // Code-runner
   "code-runner.runInTerminal": true,
 
-// Problems
+  // Problems
   "problems.decorations.enabled": true,
 
-// Telemetry
+  // Telemetry
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
 
-// Auto Close Tag Config
+  // Auto Close Tag Config
   "auto-close-tag.activationOnLanguage": [
     "html",
     "xml",
@@ -216,7 +263,7 @@
   ],
   "auto-close-tag.SublimeText3Mode": true,
 
-// Emmet
+  // Emmet
   "html-css-class-completion.enableEmmetSupport": true,
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
@@ -226,16 +273,16 @@
     "plaintext": "jade"
   },
 
-// Project Manager
+  // Project Manager
   "projectManager.git.baseFolders": ["~/git-repos", "~/dotfiles"],
 
-// Live Server
+  // Live Server
   "liveServer.settings.host": "localhost",
 
-// Trailing Spaces
+  // Trailing Spaces
   "trailing-spaces.trimOnSave": true,
 
-// Bracket Pair Colorizer
+  // Bracket Pair Colorizer
   "bracketPairColorizer.forceIterationColorCycle": true,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
   "bracketPairColorizer.highlightActiveScope": true,
@@ -246,28 +293,28 @@
     "backgroundColor : {color}"
   ],
 
-// Write-good
+  // Write-good
   "write-good.languages": ["markdown", "plaintext"],
 
-// Better Comments
+  // Better Comments
   "better-comments.highlightPlainText": true,
   "better-comments.tags": [
     {
       "tag": "//",
       "color": "#4b5760",
-      "strikethrough": true,
+      "strikethrough": true
     },
     {
       "tag": "!",
-      "color": "#FF2D00",
+      "color": "#FF2D00"
     },
     {
       "tag": "?",
-      "color": "#3498DB",
+      "color": "#3498DB"
     },
     {
       "tag": "*",
-      "color": "#b478ed",
+      "color": "#b478ed"
     },
     {
       "tag": "TODO",
@@ -278,6 +325,6 @@
       "tag": "FIXME",
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
-    },
+    }
   ]
 }

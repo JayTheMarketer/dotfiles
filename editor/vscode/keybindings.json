@@ -45,5 +45,25 @@
   {
     "key": "shift+cmd+o",
     "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "-editor.action.blockComment",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]

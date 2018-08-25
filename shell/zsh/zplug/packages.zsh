@@ -10,11 +10,12 @@ zplug "zplug/zplug", hook-build:"zplug --self-manage"
 #                                     THEMES                                   #
 # ============================================================================ #
 
+# Spaceship - https://github.com/denysdovhan/spaceship-prompt
+#
 zplug "denysdovhan/spaceship-prompt", \
   use:spaceship.zsh, \
   from:github, \
   as:theme
-
 
 # ============================================================================ #
 #                                    GITHUB                                    #
