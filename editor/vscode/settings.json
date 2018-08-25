@@ -13,7 +13,7 @@
   "workbench.editor.swipeToNavigate": true,
 
 // Editor
-  "editor.fontFamily": "'FuraCode Nerd Font', 'SauceCodePro Nerd Font', 'Inconsolata Nerd Font', Menlo",
+  "editor.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
   "editor.fontLigatures": true,
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
