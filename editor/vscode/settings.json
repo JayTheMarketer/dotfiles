@@ -14,6 +14,7 @@
 
 // Editor
   "editor.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
+  "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
