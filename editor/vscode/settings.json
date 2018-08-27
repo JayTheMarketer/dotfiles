@@ -7,17 +7,15 @@
 
   // Workbench
   "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#56006b",
+  },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.swipeToNavigate": true,
 
-<<<<<<< Updated upstream
 // Editor
   "editor.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
-=======
-  // Editor
-  "editor.fontFamily": "'Fira Code iScript', 'FuraCode Nerd Font', 'SauceCodePro Nerd Font', 'Inconsolata Nerd Font', Menlo",
->>>>>>> Stashed changes
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.scrollBeyondLastLine": false,
@@ -83,6 +81,7 @@
   "window.nativeTabs": true,
 
   // Files
+  "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.defaultLanguage": "html",
 
