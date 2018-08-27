@@ -43300,13 +43300,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>4834 3 445 77 3600 -30 1920 1057 </string>
+	<string>4772 378 445 77 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 499 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>3869 127 606 469 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>4115 449 796 486 3600 -30 1920 1057 </string>
+	<string>4115 541 796 486 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>31 489 1156 538 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -44064,7 +44064,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCodeiScript-Regular 14</string>
+			<string>FuraCodeNerdFontComplete-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
