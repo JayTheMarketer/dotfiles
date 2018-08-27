@@ -37,11 +37,10 @@ alias cp 'cp -iv'
 alias mv 'mv -iv'
 alias mkdir 'mkdir -pv'
 alias rmdir 'trash -v'
-alias cpdir 'cp -Riv'
+alias cpdir 'cp -aiv'
 alias vim 'nvim'
 alias vi 'nvim'
 alias less 'less -r'
-alias tree 'tree -C --dirsfirst'
 
 #######################################
 #            Shell Programs           #
@@ -69,11 +68,11 @@ end
 # colorls -- https://github.com/athityakumar/colorls
 #
 if type -q colorls
-  alias lc 'colorls --long --almost-all --sort-dirs --git-status'
+  alias k 'colorls --long --almost-all --sort-dirs --git-status'
 else
   echo 'installing `colorls`...'
   gem install colorls
-  alias lc 'colorls --long --almost-all --sort-dirs --git-status'
+  alias k 'colorls --long --almost-all --sort-dirs --git-status'
 end
 
 # OSX command-not-found support
