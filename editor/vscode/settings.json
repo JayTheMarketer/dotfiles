@@ -59,7 +59,6 @@
   "window.nativeTabs": true,
 
   // Files
-  "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.defaultLanguage": "html",
 
@@ -152,6 +151,8 @@
   "php.validate.run": "onType",
   "phpcs.standard": "Wordpress-Core",
   "phpcs.showSources": true,
+  "phpcbf.onsave": true,
+  "phpcbf.standard": "Wordpress-Core",
 
   // Python
   "python.linting.flake8Enabled": true,

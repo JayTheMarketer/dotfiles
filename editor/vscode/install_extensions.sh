@@ -46,6 +46,7 @@ extensions=(
 	naumovs.color-highlight
 	naumovs.theme-oceanicnext
 	octref.vetur
+	persoderlind.vscode-phpcbf
 	PeterJausovec.vscode-docker
 	PKief.material-icon-theme
 	pranaygp.vscode-css-peek
