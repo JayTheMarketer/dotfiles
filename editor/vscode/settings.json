@@ -149,10 +149,10 @@
   },
   "php.suggest.basic": false,
   "php.validate.run": "onType",
-  "phpcs.standard": "Wordpress-Core",
+  "phpcs.standard": "Wordpress",
   "phpcs.showSources": true,
   "phpcbf.onsave": true,
-  "phpcbf.standard": "Wordpress-Core",
+  "phpcbf.standard": "Wordpress",
 
   // Python
   "python.linting.flake8Enabled": true,
