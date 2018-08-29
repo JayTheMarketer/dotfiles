@@ -255,6 +255,7 @@
 
   // Live Server
   "liveServer.settings.host": "localhost",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
 
   // Trailing Spaces
   "trailing-spaces.trimOnSave": true,
@@ -303,5 +304,6 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ]
+  ],
+  "liveServer.settings.donotShowInfoMsg": true
 }
