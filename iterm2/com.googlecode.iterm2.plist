@@ -43237,6 +43237,8 @@
 	<true/>
 	<key>HideActivityIndicator</key>
 	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<true/>
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
@@ -43310,7 +43312,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>4115 541 796 486 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3910 230 1156 538 3600 -30 1920 1057 </string>
+	<string>3911 392 1154 537 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>250 463 570 452 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -44250,7 +44252,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-27T15:11:41Z</date>
+	<date>2018-08-28T16:21:30Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -44263,6 +44265,8 @@
 	<true/>
 	<key>SmartPlacement</key>
 	<true/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.43301532451923086</real>
 	<key>StretchTabsToFillBar</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
@@ -44283,7 +44287,7 @@
 	<key>Use background pattern indicator</key>
 	<false/>
 	<key>UseBorder</key>
-	<true/>
+	<false/>
 	<key>WindowNumber</key>
 	<false/>
 	<key>WordCharacters</key>
