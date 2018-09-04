@@ -5,7 +5,7 @@
 !---------------------------------------!
 */
 
-  // Workbench
+// Workbench
   "workbench.colorTheme": "Oceanic Next (dimmed bg)",
   "workbench.colorCustomizations": {
     "statusBar.background": "#56006b",
@@ -55,36 +55,36 @@
     ]
   },
 
-  // Window
+// Window
   "window.nativeTabs": true,
 
-  // Files
+// Files
   "files.insertFinalNewline": true,
-  "files.defaultLanguage": "html",
+  "files.defaultLanguage": "markdown",
 
-  // Extensions
+// Extensions
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
 
-  // File Explorer
+// File Explorer
   "explorer.sortOrder": "type",
   "explorer.confirmDelete": false,
 
-  // Search
+// Search
   "search.exclude": {
     "**/node_modules": false,
     "**/bower_components": false
   },
   "search.quickOpen.includeSymbols": true,
 
-  // Debug
+// Debug
   "debug.openExplorerOnEnd": true,
 
-  // Guides
+// Guides
   "guides.active.gutter": true,
   "guides.sendUsagesAndStats": false,
 
-  // Terminal
+// Terminal
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
@@ -99,17 +99,17 @@
 !---------------------------------------!
 */
 
-  // HTML
+// HTML
   "html.format.endWithNewline": true,
   "html.format.extraLiners": "style, head, header, body, /html, /body",
 
-  // (S)CSS
+// (S)CSS
   "css.validate": false, // disable in favor of stylelint
   "less.validate": false, // disable in favor of stylelint
   "scss.validate": false, // disable in favor of stylelint
   "autoprefixer.browsers": ["last 2 versions", "> 5%"],
 
-  // Markdown
+// Markdown
   "[markdown]": {
     "editor.wordWrap": "on",
     "editor.quickSuggestions": true
@@ -119,13 +119,13 @@
     "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
   ],
 
-  // Ruby
+// Ruby
   "ruby.lint": {
     "rubocop": true,
     "ruby": true // Runs ruby -wc
   },
 
-  // JavaScript
+// JavaScript
   "[javascript]": {
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
@@ -140,7 +140,7 @@
     "extensions": [".js", ".vue", ".jsx"]
   },
 
-  // PHP
+// PHP
   "[php]": {
     "editor.detectIndentation": true,
     "editor.useTabStops": true,
@@ -154,28 +154,28 @@
   "phpcbf.onsave": true,
   "phpcbf.standard": "Wordpress",
 
-  // Python
+// Python
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
 
-  // Shell
+// Shell
   "shellformat.path": "/usr/local/bin/shfmt",
   "shellcheck.executablePath": "/usr/local/bin/shellcheck",
 
-  // YAML
+// YAML
   "yaml.format.enable": true,
 
-  // JSON
+// JSON
   "[json]": {
     "editor.formatOnSave": false
   },
 
-  // JSON with Comments
+// JSON with Comments
   "[jsonc]": {
     "editor.formatOnSave": false
   },
 
-  // XML
+// XML
   "[xml]": {
     "editor.formatOnSave": false
   },
@@ -186,7 +186,7 @@
 !---------------------------------------!
 */
 
-  // Git
+// Git
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
   "git.autofetch": true,
@@ -196,32 +196,29 @@
     "suppressShowKeyBindingsNotice": true
   },
 
-  // NPM
+// NPM
   "npm-intellisense.scanDevDependencies": true,
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.showBuildInLibs": true,
   "npm.packageManager": "yarn",
 
-  // Prettier
+// Prettier
   "prettier.stylelintIntegration": true,
+  "prettier.tslintIntegration": true,
   "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
   "prettier.disableLanguages": [],
 
-  // Color Highlight
+// Color Highlight
   "color-highlight.matchWords": true,
 
-  // Code-runner
+// Code-runner
   "code-runner.runInTerminal": true,
 
-  // Problems
+// Problems
   "problems.decorations.enabled": true,
 
-  // Telemetry
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
-
-  // Auto Close Tag Config
+// Auto Close Tag Config
   "auto-close-tag.activationOnLanguage": [
     "html",
     "xml",
@@ -241,7 +238,7 @@
   ],
   "auto-close-tag.SublimeText3Mode": true,
 
-  // Emmet
+// Emmet
   "html-css-class-completion.enableEmmetSupport": true,
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
@@ -251,17 +248,17 @@
     "plaintext": "jade"
   },
 
-  // Project Manager
+// Project Manager
   "projectManager.git.baseFolders": ["~/git-repos", "~/dotfiles"],
 
-  // Live Server
+// Live Server
   "liveServer.settings.host": "localhost",
   "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
 
-  // Trailing Spaces
+// Trailing Spaces
   "trailing-spaces.trimOnSave": true,
 
-  // Bracket Pair Colorizer
+// Bracket Pair Colorizer
   "bracketPairColorizer.forceIterationColorCycle": true,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
   "bracketPairColorizer.highlightActiveScope": true,
@@ -272,10 +269,10 @@
     "backgroundColor : {color}"
   ],
 
-  // Write-good
+// Write-good
   "write-good.languages": ["markdown", "plaintext"],
 
-  // Better Comments
+// Better Comments
   "better-comments.highlightPlainText": true,
   "better-comments.tags": [
     {
@@ -305,6 +302,5 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ],
-  "liveServer.settings.donotShowInfoMsg": true
+  ]
 }
