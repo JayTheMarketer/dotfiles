@@ -202,6 +202,10 @@
   "npm-intellisense.showBuildInLibs": true,
   "npm.packageManager": "yarn",
 
+// Rest
+  "rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
+  "rest-client.fontSize": 12,
+
 // Prettier
   "prettier.stylelintIntegration": true,
   "prettier.tslintIntegration": true,
@@ -219,23 +223,7 @@
   "problems.decorations.enabled": true,
 
 // Auto Close Tag Config
-  "auto-close-tag.activationOnLanguage": [
-    "html",
-    "xml",
-    "php",
-    "blade",
-    "ejs",
-    "jinja",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "plaintext",
-    "markdown",
-    "vue",
-    "liquid",
-    "erb"
-  ],
+  "auto-close-tag.activationOnLanguage": ["*"],
   "auto-close-tag.SublimeText3Mode": true,
 
 // Emmet

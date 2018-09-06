@@ -22,7 +22,9 @@ extensions=(
 	deerawan.vscode-dash
 	eamodio.gitlens
 	ecmel.vscode-html-css
+	eg2.tslint
 	eg2.vscode-npm-script
+	EQuimper.react-native-react-redux-snippets-for-es6-es7-version-standard
 	esbenp.prettier-vscode
 	felixfbecker.php-debug
 	felixfbecker.php-intellisense
@@ -30,15 +32,16 @@ extensions=(
 	formulahendry.auto-rename-tag
 	formulahendry.code-runner
 	foxundermoon.shell-format
+	humao.rest-client
 	humy2833.ftp-simple
 	ikappas.phpcs
 	KnisterPeter.vscode-github
 	lunaryorn.fish-ide
 	mgmcdermott.vscode-language-babel
+	minhthai.vscode-todo-parser
 	mkaufman.HTMLHint
 	mrmlnc.vscode-autoprefixer
 	mrmlnc.vscode-scss
-	ms-mssql.mssql
 	ms-python.python
 	ms-vscode.Go
 	ms-vscode.sublime-keybindings
@@ -59,9 +62,11 @@ extensions=(
 	shinnn.stylelint
 	skyapps.fish-vscode
 	spywhere.guides
+	TimonVS.ReactSnippetsStandard
 	timonwong.shellcheck
 	travisthetechie.write-good-linter
 	WallabyJs.quokka-vscode
+	wix.vscode-import-cost
 	xabikos.JavaScriptSnippets
 )
 
