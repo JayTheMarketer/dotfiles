@@ -24,7 +24,6 @@ extensions=(
 	ecmel.vscode-html-css
 	eg2.tslint
 	eg2.vscode-npm-script
-	EQuimper.react-native-react-redux-snippets-for-es6-es7-version-standard
 	esbenp.prettier-vscode
 	felixfbecker.php-debug
 	felixfbecker.php-intellisense
@@ -62,7 +61,6 @@ extensions=(
 	shinnn.stylelint
 	skyapps.fish-vscode
 	spywhere.guides
-	TimonVS.ReactSnippetsStandard
 	timonwong.shellcheck
 	travisthetechie.write-good-linter
 	WallabyJs.quokka-vscode
