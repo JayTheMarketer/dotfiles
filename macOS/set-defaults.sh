@@ -20,11 +20,14 @@ osascript -e 'tell application "System Preferences" to quit'
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
+while true; do
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
+done 2>/dev/null &
 
 ###############################################################################
-# General UI/UX                                                               #
+# General UI/UX                                                     #
 ###############################################################################
 
 # Use 24-hour time. Use the format EEE MMM d  HH:mm
@@ -72,17 +75,15 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable crash reporter
 defaults write com.apple.CrashReporter DialogType none
 
-
 ###############################################################################
-# SSD-specific tweaks                                                         #
+# SSD-specific tweaks                                                #
 ###############################################################################
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
-
 ###############################################################################
-# Security                                                                    #
+# Security                                                          #
 ###############################################################################
 
 # Enable system firewall
@@ -94,9 +95,8 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
 # Enable File Vault
 sudo fdesetup enable
 
-
 ###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input              #
 ###############################################################################
 
 # Disable mouse enlargement with jiggle
@@ -153,10 +153,10 @@ defaults write NSGlobalDomain AppleMetricUnits -bool false
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "America/Chicago" > /dev/null
+sudo systemsetup -settimezone "America/Chicago" >/dev/null
 
 ###############################################################################
-# Screen                                                                      #
+# Screen                                                           #
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
@@ -180,7 +180,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
-# Finder                                                                      #
+# Finder                                                           #
 ###############################################################################
 
 # Allow text selection in Quick Look/Preview by default
@@ -275,7 +275,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	Privileges -bool true
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock, Dashboard, and hot corners                                     #
 ###############################################################################
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
@@ -352,7 +352,7 @@ defaults write com.apple.dock wvous-br-corner -int 2
 defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
-# Safari & WebKit                                                             #
+# Safari & WebKit                                                    #
 ###############################################################################
 
 # Press Tab to highlight each item on a web page
@@ -411,7 +411,7 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
-# Mail                                                                        #
+# Mail                                                             #
 ###############################################################################
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
@@ -426,18 +426,20 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDecending"
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 
 ###############################################################################
-# Spotlight                                                                   #
+# Spotlight                                                         #
 ###############################################################################
 
 # Load new settings before rebuilding the index
-killall mds > /dev/null 2>&1
+killall mds >/dev/null 2>&1
+
 # Make sure indexing is enabled for the main volume
-sudo mdutil -i on / > /dev/null
+sudo mdutil -i on / >/dev/null
+
 # Rebuild the index from scratch
-sudo mdutil -E / > /dev/null
+sudo mdutil -E / >/dev/null
 
 ###############################################################################
-# Terminal & iTerm 2                                                          #
+# Terminal & iTerm 2                                                 #
 ###############################################################################
 
 # Only use UTF-8 in Terminal.app
@@ -509,17 +511,17 @@ open "${DOTFILES}/iterm2/Monokai Soda.itermcolors"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
-# Time Machine                                                                #
+# Time Machine                                                      #
 ###############################################################################
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+hash tmutil &>/dev/null && sudo tmutil disablelocal
 
 ###############################################################################
-# Activity Monitor                                                            #
+# Activity Monitor                                                   #
 ###############################################################################
 
 # Show the main window when launching Activity Monitor
@@ -536,7 +538,7 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
-# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+# Address Book, Dashboard, iCal, Siri, TextEdit, and Disk Utility           #
 ###############################################################################
 
 # Enable the debug menu in Address Book
@@ -547,6 +549,9 @@ defaults write com.apple.dashboard devmode -bool true
 
 # Enable the debug menu in iCal (pre-10.8)
 defaults write com.apple.iCal IncludeDebugMenu -bool true
+
+# Enable Type-to-Siri
+#defaults write com.apple.Siri TypeToSiriEnabled -bool true
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
@@ -562,7 +567,7 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
 ###############################################################################
-# Mac App Store                                                               #
+# Mac App Store                                                     #
 ###############################################################################
 
 # Enable the WebKit Developer Tools in the Mac App Store
@@ -592,15 +597,31 @@ defaults write com.apple.commerce AutoUpdate -bool true
 # Allow the App Store to reboot machine on macOS updates
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
+# Disable in-app reviews
+defaults write com.apple.commerce InAppReviewEnabled -bool false
+
+# Allow the purchase of apps with touch id
+defaults write com.apple.commerce PurchaseByTouchID -bool true
+
 ###############################################################################
-# Photos                                                                      #
+# Photos                                                           #
 ###############################################################################
 
 # Prevent Photos from opening automatically when devices are plugged in
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+defaults write com.alfredapp.Alfred appearance.themeuid -string "alfred.theme.dark"
 
 ###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
+# Alfred                                                           #
+###############################################################################
+
+# Set Alfred theme
+defaults write com.alfredapp.Alfred appearance.themeuid -string "alfred.theme.dark"
+
+# Enable advanced calculator
+defaults write com.alfredapp.Alfred calculator.advanced -bool true
+
+###############################################################################
+# Google Chrome & Google Chrome Canary                                  #
 ###############################################################################
 
 # allow installing user scripts via github or userscripts.org
@@ -624,14 +645,14 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
-# GPGMail 2                                                                   #
+# GPGMail 2                                                         #
 ###############################################################################
 
 # Disable signing emails by default
 #defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
 
 ###############################################################################
-# Transmission.app                                                            #
+# Transmission.app                                                   #
 ###############################################################################
 
 # Use `~/Downloads/torrents` to store incomplete downloads
@@ -643,7 +664,7 @@ defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Do
 defaults write org.m0k.transmission DownloadLocationConstant -bool true
 
 # Set auto-add folder to Downloads
-  defaults write org.m0k.transmission AutoImportDirectory -string "${HOME}/Downloads"
+defaults write org.m0k.transmission AutoImportDirectory -string "${HOME}/Downloads"
 
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
@@ -661,15 +682,15 @@ defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
 # Auto-resize the window to fit transfers
-  defaults write org.m0k.transmission AutoSize -bool true
+defaults write org.m0k.transmission AutoSize -bool true
 
 # Auto update to betas
-  defaults write org.m0k.transmission AutoUpdateBeta -bool true
+defaults write org.m0k.transmission AutoUpdateBeta -bool true
 
 # IP block list.
 # Source: https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
 defaults write org.m0k.transmission EncryptionRequire -bool true
-  defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
+defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 defaults write org.m0k.transmission BlocklistNew -bool true
 defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
 
@@ -677,35 +698,100 @@ defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.n
 defaults write org.m0k.transmission RandomPort -bool true
 
 ###############################################################################
-# twitter.app                                                                 #
+# Fantastical 2                                                     #
 ###############################################################################
 
-# Disable smart quotes as it’s annoying for code tweets
-defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
+# Show completed reminders
+defaults write read com.flexibits.fantastical2.mac ShowCompletedReminders -bool true
 
-# show the app window when clicking the menu icon
-defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
+# Show end times
+defaults write read com.flexibits.fantastical2.mac ShowEndTimes -bool true
 
-# enable the hidden ‘Develop’ menu
-defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
+# Show location map
+defaults write read com.flexibits.fantastical2.mac ShowLocationMap -bool true
 
-# open links in the background
-defaults write com.twitter.twitter-mac openLinksInBackground -bool true
+# Show event availabilty
+defaults write read com.flexibits.fantastical2.mac ShowEventAvailability -bool true
 
-# allow closing the ‘new tweet’ window by pressing `Esc`
-defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
+# Show tasks in calendar window
+defaults write read com.flexibits.fantastical2.mac ShowTasksInCalendarWindow -bool true
 
-# show full names rather than Twitter handles
-defaults write com.twitter.twitter-mac ShowFullNames -bool true
+# Show time to leave
+defaults write read com.flexibits.fantastical2.mac ShowTimeToLeave -bool true
 
-# hide the app in the background if it’s not the front-most window
-defaults write com.twitter.twitter-mac HideInBackground -bool true
+# Enable status badge to display Date and Month
+defaults write read com.flexibits.fantastical2.mac StatusItemBadge -string "StatusItemStyleDateAndMonth"
+
+# Set tasks to sort by priority
+defaults write read com.flexibits.fantastical2.mac TaskSort -string "priority"
 
 ###############################################################################
-# Kill affected applications                                                  #
+# Dash                                                             #
 ###############################################################################
 
-for app in "Activity Monitor" \
+snippetSQLPath = "/Users/jss0323/Documents/Developer/dash/Library.dash"
+stackOverflowRepoUnlocked = 1
+syncFolderPath = "~/Documents/Developer/dash"
+tabBarSelectedIndex = 0
+tabRestoFirstRun = 1
+
+# Start Dash at login
+defaults write com.kapeli.dashdoc shouldStartAtLogin -bool true
+
+# Only show in the status bar
+defaults write com.kapeli.dashdoc shouldShowStatusIcon -bool true
+defaults write com.kapeli.dashdoc showInDock -bool false
+
+# Hotkey should toggle
+defaults write com.kapeli.dashdoc shouldToggleMethods -bool true
+
+# Allow syncing of bookmarks, docsets, views, general settings, and snippets
+defaults write com.kapeli.dashdoc shouldSyncBookmarks -bool true
+defaults write com.kapeli.dashdoc shouldSyncDocsets -bool true
+defaults write com.kapeli.dashdoc shouldSyncView -bool true
+defaults write com.kapeli.dashdoc shouldSyncGeneral -bool true
+# Change location to wherever you would like to save the above synced items and snippets
+defaults write com.kapeli.dashdoc snippetSQLPath -string "$HOME/Documents/Developer/dash/Library.dash"
+defaults write com.kapeli.dashdoc syncFolderPath -string "$HOME/Documents/Developer/dash"
+
+# Search fallbacks if there are no matches
+defaults write com.kapeli.dashdoc showSearchFallbacks -bool true
+defaults write com.kapeli.dashdoc showSearchFallbacksFirstRun -bool true
+
+###############################################################################
+# ImageOptim                                                        #
+###############################################################################
+
+# Enable pngcrush2 and svgo
+defaults write net.pornel.ImageOptim PngCrush2Enabled -bool true
+defaults write net.pornel.ImageOptim SvgoEnabled -bool true
+
+# Usel lossy compression
+defaults write net.pornel.ImageOptim LossyEnabled -bool true
+defaults write net.pornel.ImageOptim LossyUsed -bool true
+
+# Don't preserve permissions
+defaults write net.pornel.ImageOptim PreservePermissions -bool false
+
+###############################################################################
+# Numi                                                             #
+###############################################################################
+
+# Enable dark theme
+defaults write com.dmitrynikolaev.numi nightTheme -bool true
+
+# Enable Alfred integration
+defaults write com.dmitrynikolaev.numi alfredIntegration -bool true
+
+# Enable menu bar mode
+defaults write com.dmitrynikolaev.numi menuBarMode -bool true
+
+###############################################################################
+# Kill affected applications                                          #
+###############################################################################
+
+for app in \
+	"Activity Monitor" \
 	"Address Book" \
 	"Calendar" \
 	"cfprefsd" \
@@ -718,12 +804,15 @@ for app in "Activity Monitor" \
 	"Messages" \
 	"Photos" \
 	"Safari" \
-	"Spectacle" \
+	"Alfred 3" \
 	"SystemUIServer" \
 	"Terminal" \
 	"Transmission" \
-	"Twitter" \
+	"Fantastical 2" \
+	"Dash" \
+	"ImageOptim" \
+	"Numi" \
 	"iCal"; do
-	killall "${app}" &> /dev/null
+	killall "${app}" &>/dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
