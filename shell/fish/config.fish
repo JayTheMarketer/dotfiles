@@ -41,6 +41,7 @@ alias cpdir 'cp -aiv'
 alias vim 'nvim'
 alias vi 'nvim'
 alias less 'less -r'
+alias top 'vtop'
 
 #######################################
 #            Shell Programs           #
