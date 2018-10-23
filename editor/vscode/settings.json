@@ -257,9 +257,6 @@
     "backgroundColor : {color}"
   ],
 
-// Write-good
-  "write-good.languages": ["markdown", "plaintext"],
-
 // Better Comments
   "better-comments.highlightPlainText": true,
   "better-comments.tags": [
@@ -290,5 +287,7 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ]
+  ],
+  "markdown-preview-enhanced.liveUpdate": true,
+  "markdown-preview-enhanced.scrollSync": true
 }
