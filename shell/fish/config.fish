@@ -1,23 +1,23 @@
 #######################################
-#              FISHERMAN              #
+#            Fisherman            #
 #######################################
 
 # Ensure fisherman and plugins are installed.
 if not type -q fisher
   echo "==> Installing Fisherman..."
   if type -q brew
-    brew tap fisherman/tap
-    brew install fisherman
+      brew tap fisherman/tap
+      brew install fisherman
   else
-    curl -sLo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+      curl -sLo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
   end
 
   # install fishfile
-	fisher
+  fisher
 end
 
 #######################################
-#            Env Variables            #
+#          Env Variables          #
 #######################################
 
 set --export EDITOR 'nvim'
@@ -29,7 +29,7 @@ set --export theme_color_scheme 'dark'
 set --export theme_title_display_process 'yes'
 
 #######################################
-#    Aliases (shorthand functions)    #
+#    Aliases (shorthand functions)   #
 #######################################
 #
 alias rm 'trash -v'
@@ -44,8 +44,12 @@ alias less 'less -r'
 alias top 'vtop'
 
 #######################################
-#            Shell Programs           #
+#          Shell Programs          #
 #######################################
+
+# asdf -- https://github.com/asdf-vm/asdf
+#
+source ~/.asdf/asdf.fish
 
 # hub -- https://github.com/github/hub
 #
@@ -55,7 +59,7 @@ if type -q hub
 else
   echo 'installing `hub`...'
   eval (hub alias -s)
-  complete -c hub -w gi
+  complete -c hub -w git
 end
 
 # pygmentize -- http://pygments.org/docs/cmdline/
@@ -80,7 +84,7 @@ end
 # https://github.com/Homebrew/homebrew-command-not-found
 #
 if type -q brew
-  brew command command-not-found-init > /dev/null 2>&1; and source (brew command-not-found-init)
+  brew command command-not-found-init >/dev/null 2>&1; and source (brew command-not-found-init)
 end
 
 # add iTerm integration

@@ -1,5 +1,5 @@
 {
-  /*
+/*
 !---------------------------------------!
 ?----------------VS Core----------------?
 !---------------------------------------!
@@ -28,7 +28,6 @@
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
   "editor.renderIndentGuides": false,
-  "editor.colorDecorators": false,
   "editor.tabSize": 2,
   "editor.matchBrackets": false,
   "editor.formatOnPaste": true,
@@ -93,7 +92,7 @@
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "terminal.integrated.scrollback": 30000,
 
-  /*
+/*
 !---------------------------------------!
 ?---------------Languages---------------?
 !---------------------------------------!
@@ -114,10 +113,7 @@
     "editor.wordWrap": "on",
     "editor.quickSuggestions": true
   },
-  "markdown-preview-enhanced.mermaidTheme": "mermaid.dark.css",
-  "markdown.styles": [
-    "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
-  ],
+  "markdown-preview-enhanced.mermaidTheme": "dark",
 
 // Ruby
   "ruby.lint": {
@@ -132,13 +128,6 @@
     "editor.useTabStops": false
   },
   "javascript.implicitProjectConfig.checkJs": true,
-  "eslint.enable": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.packageManager": "yarn",
-  "eslint.validate": ["javascript", "javascriptreact", "vue"],
-  "eslint.options": {
-    "extensions": [".js", ".vue", ".jsx"]
-  },
 
 // PHP
   "[php]": {
@@ -180,7 +169,12 @@
     "editor.formatOnSave": false
   },
 
-  /*
+// Fish
+  "[fish]": {
+    "editor.formatOnSave": false
+  },
+
+/*
 !---------------------------------------!
 ?----------------Plugins----------------?
 !---------------------------------------!
@@ -206,15 +200,29 @@
   "rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
   "rest-client.fontSize": 12,
 
+// ESLint
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue",
+      ".jsx"
+    ]
+  },
+
 // Prettier
   "prettier.stylelintIntegration": true,
   "prettier.tslintIntegration": true,
   "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
   "prettier.disableLanguages": [],
-
-// Color Highlight
-  "color-highlight.matchWords": true,
 
 // Code-runner
   "code-runner.runInTerminal": true,
@@ -287,7 +295,5 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ],
-  "markdown-preview-enhanced.liveUpdate": true,
-  "markdown-preview-enhanced.scrollSync": true
+  ]
 }

@@ -10,7 +10,6 @@ extensions=(
 	abusaidm.html-snippets
 	alefragnani.project-manager
 	alexdima.copy-relative-path
-	anseki.vscode-color
 	castwide.solargraph
 	christian-kohler.npm-intellisense
 	christian-kohler.path-intellisense
@@ -45,7 +44,6 @@ extensions=(
 	ms-vscode.Go
 	ms-vscode.sublime-keybindings
 	msjsdiag.debugger-for-chrome
-	naumovs.color-highlight
 	naumovs.theme-oceanicnext
 	octref.vetur
 	persoderlind.vscode-phpcbf
@@ -61,8 +59,8 @@ extensions=(
 	shinnn.stylelint
 	skyapps.fish-vscode
 	spywhere.guides
+	streetsidesoftware.code-spell-checker
 	timonwong.shellcheck
-	travisthetechie.write-good-linter
 	WallabyJs.quokka-vscode
 	wix.vscode-import-cost
 	xabikos.JavaScriptSnippets
