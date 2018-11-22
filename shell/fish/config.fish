@@ -31,7 +31,7 @@ set --export theme_title_display_process 'yes'
 #######################################
 #    Aliases (shorthand functions)   #
 #######################################
-#
+
 alias rm 'trash -v'
 alias cp 'cp -iv'
 alias mv 'mv -iv'
