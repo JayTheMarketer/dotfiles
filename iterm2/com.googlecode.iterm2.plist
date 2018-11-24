@@ -43308,17 +43308,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 160 606 469 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>291 862 918 512 0 0 2560 1418 </string>
+	<string>291 862 796 486 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-<<<<<<< HEAD
-	<string>236 461 1154 537 0 0 1680 1027 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>250 463 570 452 0 0 1680 1028 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>233 576 570 452 0 0 1680 1028 </string>
-=======
-	<string>1107 656 1154 537 0 0 2560 1418 </string>
->>>>>>> :construction: SAVEPOINT
+	<string>1354 406 1154 537 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -44235,7 +44227,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-27T12:16:48Z</date>
+	<date>2018-11-23T18:06:31Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -44278,11 +44270,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-<<<<<<< HEAD
-	<string>3.2.1beta4</string>
-=======
-	<string>3.2.1</string>
->>>>>>> :construction: SAVEPOINT
+	<string>3.2.6beta4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
