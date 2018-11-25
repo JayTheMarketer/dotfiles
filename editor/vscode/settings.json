@@ -30,8 +30,6 @@
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
   "editor.matchBrackets": false,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -68,6 +66,7 @@
 // File Explorer
   "explorer.sortOrder": "type",
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
 
 // Search
   "search.exclude": {
@@ -133,7 +132,6 @@
   "[php]": {
     "editor.detectIndentation": true,
     "editor.useTabStops": true,
-    "editor.formatOnSave": false,
     "editor.insertSpaces": false
   },
   "php.suggest.basic": false,
@@ -197,8 +195,16 @@
   "npm.packageManager": "yarn",
 
 // Rest
-  "rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
-  "rest-client.fontSize": 12,
+"rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
+"rest-client.fontSize": 12,
+
+// Prettier
+  "prettier.stylelintIntegration": true,
+  "prettier.tslintIntegration": true,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.disableLanguages": [],
 
 // ESLint
   "eslint.enable": true,
@@ -207,9 +213,11 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "vue"
+    "vue",
+    "html"
   ],
   "eslint.options": {
+    "baseConfig": "~/.eslintrc.json",
     "extensions": [
       ".js",
       ".vue",
@@ -217,12 +225,14 @@
     ]
   },
 
-// Prettier
-  "prettier.stylelintIntegration": true,
-  "prettier.tslintIntegration": true,
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
-  "prettier.disableLanguages": [],
+// Stylelint
+  "stylelint.config": {
+    "extends": "/usr/local/lib/node_modules/stylelint-config-standard",
+    "plugins": "/usr/local/lib/node_modules/stylelint-scss",
+  },
+
+// Vetur
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
 
 // Code-runner
   "code-runner.runInTerminal": true,
@@ -249,7 +259,7 @@
 
 // Live Server
   "liveServer.settings.host": "localhost",
-  "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox",
 
 // Trailing Spaces
   "trailing-spaces.trimOnSave": true,
@@ -295,5 +305,5 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ]
+  ],
 }
