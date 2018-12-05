@@ -3,11 +3,17 @@
 #######################################
 
 # Ensure fisherman and plugins are installed.
-if not functions -q fisher
+if not type -q fisher
   echo "==> Installing Fisherman..."
-  set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-  fish -c fisher
+  if type -q brew
+      brew tap fisherman/tap
+      brew install fisherman
+  else
+      curl -sLo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+  end
+
+  # install fishfile
+  fisher
 end
 
 #######################################
