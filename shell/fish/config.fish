@@ -47,10 +47,6 @@ alias top 'vtop'
 #          Shell Programs          #
 #######################################
 
-# asdf -- https://github.com/asdf-vm/asdf
-#
-source ~/.asdf/asdf.fish
-
 # hub -- https://github.com/github/hub
 #
 if type -q hub

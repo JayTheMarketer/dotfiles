@@ -40,10 +40,6 @@ export PATH="${HOME}/bin:${PATH}"
 source "${DOTFILES}/shell/zsh/aliases.zsh"
 source "${DOTFILES}/shell/zsh/local_functions.zsh"
 #
-# load asdf
-source ${HOME}/.asdf/asdf.sh
-source ${HOME}/.asdf/etc/bash_completion.d/asdf.bash
-#
 # load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # ============================================================================ #

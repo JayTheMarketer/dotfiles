@@ -70,8 +70,3 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
 fi
-
-# enable asdf
-source ${HOME}/.asdf/asdf.sh
-source ${HOME}/.asdf/etc/bash_completion.d/asdf.bash
-
