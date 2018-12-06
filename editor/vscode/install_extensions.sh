@@ -16,6 +16,7 @@ extensions=(
 	chrmarti.regex
 	CoenraadS.bracket-pair-colorizer
 	cssho.vscode-svgviewer
+	dariofuzinato.vue-peek
 	DavidAnson.vscode-markdownlint
 	dbaeumer.vscode-eslint
 	deerawan.vscode-dash
@@ -30,6 +31,7 @@ extensions=(
 	formulahendry.auto-rename-tag
 	formulahendry.code-runner
 	foxundermoon.shell-format
+	ginie.pug2html
 	humao.rest-client
 	humy2833.ftp-simple
 	ikappas.phpcs
@@ -59,7 +61,6 @@ extensions=(
 	shinnn.stylelint
 	skyapps.fish-vscode
 	spywhere.guides
-	streetsidesoftware.code-spell-checker
 	timonwong.shellcheck
 	WallabyJs.quokka-vscode
 	wix.vscode-import-cost
