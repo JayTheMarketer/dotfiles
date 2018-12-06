@@ -19,9 +19,9 @@ export BLOCKSIZE=1k
 
 ## Command history configuration
 if [ -z "${HISTFILE}" ]; then
-  if [[ ${SHELL} == $(which zsh) ]]; then
+  if [[ ${SHELL} == $(command -v zsh) ]]; then
     HISTFILE=~/.zsh_history
-  elif [[ ${SHELL} == $(which bash) ]]; then
+  elif [[ ${SHELL} == $(command -v bash) ]]; then
     HISTFILE=~/.bash_history
   else
     HISTFILE=~/.sh_history
@@ -307,17 +307,17 @@ export PATH="${HOME}/bin:${PATH}"
 export ROOT='sudo'
 export VISUAL='$EDITOR'
 
-if which nvim >/dev/null; then
+if command -v nvim >/dev/null; then
   export EDITOR='nvim'
 else
   export EDITOR='vim'
 fi
 
 # FZF
+if command -v fzf >/dev/null; then
 
-if which fzf >/dev/null; then
   # using fd (https://github.com/sharkdp/fd)
-  if which fd >/dev/null; then
+  if command -v fd >/dev/null; then
     export FZF_DEFAULT_COMMAND="fd . $HOME"
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     export FZF_ALT_C_COMMAND="fd -t d . $HOME"
@@ -397,7 +397,7 @@ export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
 # check for GNU dircolors
-if type gdircolors >/dev/null; then
+if command -v gdircolors >/dev/null; then
   alias dircolors=gdircolors
 fi
 

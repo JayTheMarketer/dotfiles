@@ -1,54 +1,55 @@
 - defaults:
-  link:
-    create: true
-    relink: true
-    force: true
+    link:
+      create: true
+      relink: true
+      force: true
 
 - clean: ['~']
 
 - clean:
-  ~/.config:
-    force: true
+    ~/.config:
+      force: true
 
 - link:
-  ~/bin: bin
-  ~/.docker/config.json: docker/config.json
-  ~/.docker/daemon.json: docker/daemon.json
-  ~/.editorconfig: editor/editorconfig
-  ~/.config/nvim: editor/nvim
-  ~/Library/Application Support/Code/User/settings.json: editor/vscode/settings.json
-  ~/Library/Application Support/Code/User/keybindings.json: editor/vscode/keybindings.json
-  ~/Library/Application Support/Code/User/snippets: editor/vscode/snippets
-  ~/.gitconfig: git/gitconfig
-  ~/.gitignore_global: git/gitignore_global
-  ~/.gitattributes: git/gitattributes
-  ~/.gnupg/gpg.conf: gpg/gpg.conf
-  ~/.gnupg/pubring.gpg: gpg/pubring.gpg
-  ~/Library/Safari/Extensions: macOS/safari/extensions
-  ~/.npmrc: npm/npmrc
-  ~/.composer/composer.json: php/composer.json
-  ~/.config/ranger: ranger
-  ~/.caniuse.json: shell/caniuse.json
-  ~/.dircolors: shell/dircolors
-  ~/.shenv: shell/shenv
-  ~/.config/youtube-dl/config: shell/youtube-dl.conf
-  ~/.bashrc: shell/bash/bashrc
-  ~/.bash_profile: shell/bash/bash_profile
-  ~/.zshrc: shell/zsh/zshrc
-  ~/.zshenv: shell/zsh/zshenv
-  ~/.config/fish/fish.config: shell/fish/fish.config
-  ~/.config/fish/fishfile: shell/fish/fishfile
-  ~/.config/fish/functions: shell/fish/functions
-  ~/.ssh/config: ssh/config
+    ~/bin: bin
+    ~/.docker/config.json: docker/config.json
+    ~/.docker/daemon.json: docker/daemon.json
+    ~/.editorconfig: editor/editorconfig
+    ~/.config/nvim: editor/nvim
+    ~/Library/Application Support/Code/User/settings.json: editor/vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: editor/vscode/keybindings.json
+    ~/Library/Application Support/Code/User/snippets: editor/vscode/snippets
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.gitattributes: git/gitattributes
+    ~/.gnupg/gpg.conf: gpg/gpg.conf
+    ~/.gnupg/pubring.gpg: gpg/pubring.gpg
+    ~/Library/Safari/Extensions: macOS/safari/extensions
+    ~/.npmrc: npm/npmrc
+    ~/.composer/composer.json: php/composer.json
+    ~/.config/ranger: ranger/
+    ~/.caniuse.json: shell/caniuse.json
+    ~/.dircolors: shell/dircolors
+    ~/.shenv: shell/shenv
+    ~/.config/youtube-dl/config: shell/youtube-dl.conf
+    ~/.bashrc: shell/bash/bashrc
+    ~/.bash_profile: shell/bash/bash_profile
+    ~/.zshrc: shell/zsh/zshrc
+    ~/.zshenv: shell/zsh/zshenv
+    ~/.config/fish/fish.config: shell/fish/fish.config
+    ~/.config/fish/fishfile: shell/fish/fishfile
+    ~/.config/fish/functions: shell/fish/functions
+    ~/.ssh/config: ssh/config
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [brew install rcmdnk/file/brew-file, Installing Brewfile]
-  - [cp homebrew/Brewfile_bootstrap homebrew/Brewfile, Setting up Brewfile]
-  - [brew file install, Tapping + Pouring + Casking your Brewfile]
-  - [ln -sFn "~/.config/nvim" "~/.vim", Symlinking vim to neovim]
-  - [cd ~/.config/nvim && ./venv.sh, Setting up neovim environment]
-  - [cd ~/.config/nvim && make test && make, Installing neovim plugins]
-  - [source "editor/vscode/install_extensions.sh", Installing VSCode extensions]
-  - [source golang/install.sh, Installing Golang]
-  - [cd ~/dotfiles && source tmux/tmux-config/install.sh && ln -sfn tmux/tmux.conf ~/.tmux/tmux.conf, Installing Tmux config]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [cp "git/gitconfig.local_bootstrap" , Copying gitconfig.local example to $HOME]
+    - [brew install rcmdnk/file/brew-file, Installing Brewfile]
+    - [cp homebrew/Brewfile_bootstrap homebrew/Brewfile, Setting up Brewfile]
+    - [brew file install, Tapping + Pouring + Casking your Brewfile]
+    - [source "editor/vscode/install_extensions.sh", Installing VSCode extensions]
+    - [source golang/install.sh, Installing Golang]
+    - [source tmux/tmux-config/install.sh, Installing Tmux config]
+    - [ln -sFn "~/.config/nvim" "~/.vim", Symlinking vim to neovim]
+    - [cd ~/.config/nvim && ./venv.sh, Setting up neovim environment]
+    - [cd ~/.config/nvim && make test && make, Installing neovim plugins]
