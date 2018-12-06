@@ -82,7 +82,7 @@
 [alias]
 
 ###############################################################################
-# One-letter Aliases                                                          #
+# One-letter Aliases                                                 #
 ###############################################################################
 
   a = add
@@ -100,14 +100,14 @@
   w = whatchanged
 
 ###############################################################################
-# Status Aliases                                                              #
+# Status Aliases                                                     #
 ###############################################################################
 
   ss = status --short
   ssb = status --short --branch
 
 ###############################################################################
-# Add Aliases                                                                 #
+# Add Aliases                                                       #
 ###############################################################################
 
   aa = add --all
@@ -115,7 +115,7 @@
   au = add --update
 
 ###############################################################################
-# Branch Aliases                                                              #
+# Branch Aliases                                                     #
 ###############################################################################
 
   branches = branch -a
@@ -129,7 +129,7 @@
   bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f" # switches to master; runs `git up` to sync master with origin; runs `git bclean` to cleanup merged branches
 
 ###############################################################################
-# Commit Aliases                                                              #
+# Commit Aliases                                                     #
 ###############################################################################
 
   amend = commit -a --amend
@@ -142,20 +142,20 @@
   fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET && EDITOR=true git rebase --interactive --autosquash $TARGET~; }; f"  # use git fixup COMMIT to change a specific "COMMIT", exactly like you would use git commit --amend to change the latest one.
 
 ###############################################################################
-# Pull Aliases                                                                #
+# Pull Aliases                                                      #
 ###############################################################################
 
   pf = pull --ff-only # pull if a merge can be resolved as a fast-forward, otherwise fail.
 
 ###############################################################################
-# Push Aliases                                                                #
+# Push Aliases                                                      #
 ###############################################################################
 
   please = push --force-with-lease
   undo-push = push -f origin HEAD^:master
 
 ###############################################################################
-# Cherry-Pick Aliases                                                         #
+# Cherry-Pick Aliases                                                #
 ###############################################################################
 
   cp = cherry-pick
@@ -164,9 +164,9 @@
     git log -1 --pretty=%P $0 | cut -b 42- > .git/MERGE_HEAD && \
     git commit --verbose'"
 
-#                                    #
-############ DIFF ALIASES ############
-#                                    #
+###############################################################################
+# Diff Aliases                                                      #
+###############################################################################
 
   changed = show --pretty="format:" --name-only
   diff-all = !"for name in $(git diff --name-only $1); do git difftool $1 $name & done"
@@ -178,7 +178,7 @@
   dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f" # diff-so-fancy required
 
 ###############################################################################
-# Merge Aliases                                                               #
+# Merge Aliases                                                     #
 ###############################################################################
 
   me = merge --no-commit --no-ff # merge but without autocommit, and with a commit even if the merge resolved as a fast-forward.
@@ -206,7 +206,7 @@
   theirs = !"f() { git checkout --theirs $@ && git add $@; }; f" # theirs: checkout their version of a file and add it
 
 ###############################################################################
-# Rebase Aliases                                                              #
+# Rebase Aliases                                                    #
 ###############################################################################
 
   rb = rebase
@@ -217,7 +217,7 @@
   rebase-branch = !"git rebase --interactive `git merge-base master HEAD`" # Interactively rebase all the commits on the current branch
 
 ###############################################################################
-# Workflow Aliases                                                            #
+# Workflow Aliases                                                   #
 ###############################################################################
 
   wtf = !sh -c "~/.bin/git-wtf" # displays summary of the state of the current repo
@@ -245,7 +245,7 @@
   reincarnate = !"f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f" # Calls the `publish` and `unpublish` aliases.
 
 ###############################################################################
-# Maintenace Aliases                                                          #
+# Maintenace Aliases                                                 #
 ###############################################################################
 
   discard = checkout -- # Discard changes in a (list of) file(s) in working tree
@@ -258,7 +258,7 @@
   optimize = !git pruner; git repacker; git prune-packed # Do everything we can to optimize the repository  -- this command takes a long time to run, perhaps even overnight.
 
 ###############################################################################
-# Remote Aliases                                                              #
+# Remote Aliases                                                     #
 ###############################################################################
 
   remotes = remote -v
@@ -271,7 +271,7 @@
   push-to-all-remotes = !git remote | xargs -I% -n1 git push % # Push to all remotes
 
 ###############################################################################
-# Submodule Aliases                                                           #
+# Submodule Aliases                                                  #
 ###############################################################################
 
   sm = submodule
@@ -280,7 +280,7 @@
   smuir = submodule update --init --recursive # useful to bring a submodule fully up to date.
 
 ###############################################################################
-# Tag Management Aliases                                                      #
+# Tag Management Aliases                                              #
 ###############################################################################
 
   tags = tag -n1 --list
@@ -288,7 +288,7 @@
   lasttagged = !git describe --tags `git rev-list --tags --max-count=1` # Latest annotated tag in all branches
 
 ###############################################################################
-# Lookup Aliases                                                              #
+# Lookup Aliases                                                    #
 ###############################################################################
 
   whois = "!sh -c 'git log --regexp-ignore-case -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -" # whois: given a string for an author, try to figure out full name and email:
@@ -300,7 +300,7 @@
   refs-by-date = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' # Sort by date for branches; can be useful for spring cleaning
 
 ###############################################################################
-# Log Aliases                                                                 #
+# Log Aliases                                                       #
 ###############################################################################
 
   logg = !git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | emojify | less -r # colored & emojified logs -- emojify package required
@@ -321,14 +321,14 @@
   lastchange = log -p --follow -n 1 # see last commit for particular file
 
 ###############################################################################
-# Grep Aliases                                                              #
+# Grep Aliases                                                      #
 ###############################################################################
 
   gg =  grep --break --heading --line-number
   grep-all = !"f() { git rev-list --all | xargs git grep \"$@\"; }; f" # Find text in any commit ever
 
 ###############################################################################
-# List Aliases                                                                #
+# List Aliases                                                      #
 ###############################################################################
 
   tree = show-tree
@@ -336,7 +336,7 @@
   list-ignored = ls-files --others --i --exclude-standard # list files that git has ignored.
 
 ###############################################################################
-# Shell Scripting Aliases                                                     #
+# Shell Scripting Aliases                                             #
 ###############################################################################
 
   aliases = "!git config -l | grep alias | cut -c 7-" # list git aliases
@@ -346,7 +346,7 @@
   debug = !GIT_PAGER= gdb --args git # A 'debug' alias to help debugging builtins: when debugging builtins,
 
 ###############################################################################
-# Advanced Aliases                                                            #
+# Advanced Aliases                                                   #
 ###############################################################################
 
   serve = "-c daemon.receivepack=true daemon --base-path=. --export-all --reuseaddr --verbose" # Serve the local directory by starting a git server daemon, so others can pull/push from my machine
