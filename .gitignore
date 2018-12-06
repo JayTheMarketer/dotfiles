@@ -76,3 +76,5 @@ shell/fish/functions/mvbak.fish
 shell/fish/functions/uncpbak.fish
 shell/fish/functions/unmvbak.fish
 macOS/safari/extensions/Extensions.plist
+shell/fish/functions/__fzf_complete_preview.fish
+
