@@ -12,7 +12,6 @@ brew coreutils
 brew curl
 brew curl-openssl
 brew diff-so-fancy
-brew dockutil
 brew emojify
 brew findutils --with-default-names
 brew fish
