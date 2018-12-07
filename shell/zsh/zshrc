@@ -14,33 +14,48 @@
 # ============================================================================ #
 #                                  ZSH CONFIG                        #
 # ============================================================================ #
-#
-# iterm integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# iterm integration
 #
+test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
+
 # zstyles and setopts
-source "${DOTFILES}/shell/zsh/conf.zsh"
 #
+source "${DOTFILES}/shell/zsh/conf.zsh"
+
+
 # ============================================================================ #
 #                                  ZPLUG INIT                        #
 # ============================================================================ #
+
+# load zplug
+# https://github.com/zplug/zplug
 #
-export ZPLUG_HOME="${HOME}/.zplug"
+export ZPLUG_HOME="$HOME/.zplug"
 source "${ZPLUG_HOME}/zplug.zsh"
-#
+
 # ============================================================================ #
 #                                 USER CONFIG                        #
 # ============================================================================ #
-#
+
 # Re-add presonal bin so it is first in the $PATH
-export PATH="${HOME}/bin:${PATH}"
 #
+export PATH="${HOME}/bin:${PATH}"
+
 # local aliases & functions
+#
 source "${DOTFILES}/shell/zsh/aliases.zsh"
 source "${DOTFILES}/shell/zsh/local_functions.zsh"
-#
+
 # load fzf
+# https://github.com/junegunn/fzf
+#
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# initialize rbenv
+# https://github.com/rbenv/rbenv
+#
+eval "$(rbenv init -)"
+
 # ============================================================================ #
 

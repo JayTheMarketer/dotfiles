@@ -3,12 +3,14 @@
 #######################################
 
 # Ensure fisherman and plugins are installed.
+#
 if not functions -q fisher
   echo "==> Installing Fisherman..."
   set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
   curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
   fish -c fisher
 end
+
 
 #######################################
 #          Env Variables          #
@@ -21,6 +23,7 @@ set --export fish_key_bindings 'fish_vi_key_bindings'
 set --export fisher_active_prompt 'bobthefish'
 set --export theme_color_scheme 'dark'
 set --export theme_title_display_process 'yes'
+
 
 #######################################
 #    Aliases (shorthand functions)   #
@@ -36,6 +39,7 @@ alias vim 'nvim'
 alias vi 'nvim'
 alias less 'less -r'
 alias top 'vtop'
+
 
 #######################################
 #          Shell Programs          #
@@ -81,11 +85,16 @@ end
 #
 test -e $HOME/.iterm2_shell_integration.fish; and source $HOME/.iterm2_shell_integration.fish
 
+# initialize rbenv
+# https://github.com/rbenv/rbenv
+#
+status --is-interactive; and source (rbenv init -|psub)
 
 #######################################
-#            Local Config             #
+#            Local Config         #
 #######################################
 
 # Add confidential info here
 #
 test -e $HOME/.config/fish/local.config.fish; and source $HOME/.config/fish/local.config.fish
+
