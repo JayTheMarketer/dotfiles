@@ -183,7 +183,6 @@
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "git.confirmSync": false,
-  "gitlens.historyExplorer.enabled": true,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
@@ -192,7 +191,6 @@
   "npm-intellisense.scanDevDependencies": true,
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.showBuildInLibs": true,
-  "npm.packageManager": "yarn",
 
 // Rest
 "rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
@@ -209,7 +207,6 @@
 // ESLint
   "eslint.enable": true,
   "eslint.autoFixOnSave": true,
-  "eslint.packageManager": "yarn",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
