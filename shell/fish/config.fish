@@ -45,6 +45,11 @@ alias top 'vtop'
 #          Shell Programs          #
 #######################################
 
+# initialize rbenv
+# https://github.com/rbenv/rbenv
+#
+status --is-interactive; and source (rbenv init -|psub)
+
 # hub -- https://github.com/github/hub
 #
 if type -q hub
@@ -84,11 +89,6 @@ end
 # add iTerm integration
 #
 test -e $HOME/.iterm2_shell_integration.fish; and source $HOME/.iterm2_shell_integration.fish
-
-# initialize rbenv
-# https://github.com/rbenv/rbenv
-#
-status --is-interactive; and source (rbenv init -|psub)
 
 #######################################
 #            Local Config         #
