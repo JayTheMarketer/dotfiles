@@ -90,6 +90,10 @@ end
 #
 test -e $HOME/.iterm2_shell_integration.fish; and source $HOME/.iterm2_shell_integration.fish
 
+# keep $PATH clean
+#
+set PATH (perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')
+
 #######################################
 #            Local Config         #
 #######################################
@@ -97,4 +101,3 @@ test -e $HOME/.iterm2_shell_integration.fish; and source $HOME/.iterm2_shell_int
 # Add confidential info here
 #
 test -e $HOME/.config/fish/local.config.fish; and source $HOME/.config/fish/local.config.fish
-
