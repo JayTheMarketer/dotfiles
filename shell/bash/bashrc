@@ -91,3 +91,8 @@ fi
 # https://github.com/rbenv/rbenv
 #
 eval "$(rbenv init -)"
+
+# keep $PATH clean
+#
+PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
+
