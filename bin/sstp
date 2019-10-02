@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# use SSTP from MacOS
+#
+# https://stackoverflow.com/questions/40590806/windows-sstp-vpn-connect-from-mac/40590807#40590807
+
+# make sure homebrew is installed
+if ! type brew >/dev/null 2>&1; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# make sure sstp-client is installed
+if ! type sstpc >/dev/null 2>&1; then
+  brew install sstp-client
+fi
+
+# ask user for server, user, and password information
+read -p 'Server: ' SERVER
+read -p 'Username: ' USER
+read -p 'Password: ' -s PASSWORD
+
+# ask user for sudo access
+echo 'Enter password for sudo access'
+
+# run sstp-client command
+sudo /usr/local/sbin/sstpc --log-stderr --cert-warn --user "$USER" --password "$PASSWORD" "$SERVER" usepeerdns require-mschap-v2 noauth noipdefault defaultroute refuse-eap noccp
+
