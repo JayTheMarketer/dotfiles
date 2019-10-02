@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###############################################
-###                   SUDO                  ###
+###               SUDO                ###
 ###############################################
 
 alias sudo='sudo '
@@ -9,7 +9,7 @@ alias _='sudo'
 alias please='sudo'
 
 ###############################################
-###                NAVIGATION               ###
+###             NAVIGATION             ###
 ###############################################
 
 alias ..='cd ..'
@@ -22,7 +22,7 @@ alias home='cd ~'
 alias old='cd ${OLDPWD}'
 
 ###############################################
-###                 SHORTCUTS               ###
+###             SHORTCUTS              ###
 ###############################################
 
 alias e='${EDITOR}'
@@ -51,7 +51,7 @@ alias fix_stty='stty sane'            # Restore terminal settings when screwed u
 alias clear="clear && printf '\e[3J'" # clear buffer
 
 ###############################################
-###                ALTERNATES               ###
+###             ALTERNATES             ###
 ###############################################
 
 # use nvim for vi
@@ -70,8 +70,13 @@ if which mmake >/dev/null; then
 	alias make='mmake'
 fi
 
+# Use trash for rm -- https://github.com/ali-rantakari/trash/
+if which trash >/dev/null; then
+	alias rm='trash -v'
+fi
+
 ###############################################
-###                  LS                     ###
+###                LS                 ###
 ###############################################
 
 if ! which gls >/dev/null; then
@@ -100,20 +105,18 @@ alias lss="gls -l *(s,S,t) --color" # Only files with setgid/setuid/sticky flag
 alias dirsize='du -shx * | sort -hr'
 
 ###############################################
-###        MV, RM, CP, GUNZIP, TAR          ###
+###         MV, CP, GUNZIP, TAR         ###
 ###############################################
 
 alias mv='mv -iv'
-alias rm='rm -iv'
 alias cp='cp -iv'
 alias cpdir='cp -Riv'
 alias mkdir='mkdir -pv'
-alias rmdir='rm -rfv'
 alias gunz='gunzip -k'
 alias tarz='tar -k -j'
 
 ###############################################
-###      CAT, GREP, CURL, WGET, AWK         ###
+###      CAT, GREP, CURL, WGET, AWK       ###
 ###############################################
 
 alias awk='gawk'
@@ -130,7 +133,7 @@ alias gurl='curl --compressed' # Gzip-enabled `curl`
 alias c='colorize' # requires `$DOTFILES/bin/colorize`
 
 ###############################################
-###      CAT, GREP, CURL, WGET, AWK         ###
+###               RSYNC               ###
 ###############################################
 
 alias rsync-copy="rsync -avz --progress -h"
