@@ -305,7 +305,7 @@ export PATH="${HOME}/bin:${PATH}"
 # Set env programs
 #
 export ROOT='sudo'
-export VISUAL='$EDITOR'
+export VISUAL="$EDITOR"
 
 if command -v nvim >/dev/null; then
   export EDITOR='nvim'

@@ -43232,7 +43232,7 @@
 	<key>EnableProxyIcon</key>
 	<true/>
 	<key>EnableRendezvous</key>
-	<true/>
+	<false/>
 	<key>FocusFollowsMouse</key>
 	<true/>
 	<key>HapticFeedbackForEsc</key>
@@ -43309,7 +43309,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 383 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>87 271 1011 447 0 0 1440 877 </string>
+	<string>400 68 1011 447 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -44140,6 +44140,7 @@
 	<array>
 		<string>3.3.4</string>
 		<string>3.3.5beta1</string>
+		<string>3.3.5beta3</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -44178,7 +44179,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0B455C7F-A5E9-407E-AAEE-C6073D6AFDE3</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>73</integer>
+	<integer>86</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -44708,6 +44709,22 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
 				<string>tmuxWindowTitle</string>
@@ -44952,10 +44969,12 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/jschwartz/dotfiles/iterm2</string>
+	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
+	<false/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
-	<false/>
+	<true/>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -44967,7 +44986,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-02T02:00:45Z</date>
+	<date>2019-10-03T14:05:39Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -44976,9 +44995,13 @@
 	<false/>
 	<key>Secure Input</key>
 	<true/>
+	<key>SeparateStatusBarsPerPane</key>
+	<false/>
 	<key>ShowBookmarkName</key>
 	<true/>
 	<key>ShowNewOutputIndicator</key>
+	<true/>
+	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
 	<true/>
@@ -44986,12 +45009,16 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.43301532451923086</real>
+	<key>StatusBarPosition</key>
+	<integer>0</integer>
 	<key>StretchTabsToFillBar</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
 	<integer>9</integer>
 	<key>TabStyle</key>
 	<integer>1</integer>
+	<key>TabStyleWithAutomaticOption</key>
+	<integer>4</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
@@ -45016,7 +45043,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.5beta1</string>
+	<string>3.3.5beta3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
