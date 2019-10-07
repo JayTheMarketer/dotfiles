@@ -295,7 +295,7 @@ function capwin() { # window to file
 }
 
 ### Get OS X Software Updates, and update installed Homebrew, NPM, Yarn, Ruby gems, Composer, and their globally installed packages
-alias updateall='sudo softwareupdate -i -a; brewup; yarnup; gemup; composeup'
+alias updateall='sudo softwareupdate --install --all; brewup; npmup; gemup; composerup'
 
 alias eject="diskutil eject"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
