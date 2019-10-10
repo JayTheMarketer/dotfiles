@@ -4,9 +4,9 @@ if which ruby >/dev/null; then
   alias rb="ruby"
   alias sgem='sudo gem' # Run sudo gem on system ruby, not active ruby.
   alias rfind='find . -name "*.rb" | xargs grep -n' # Find ruby file
-  alias gin="gem install"
-  alias gun="gem uninstall"
-  alias gli="gem list"
+  alias gemi="gem install"
+  alias gemx="gem uninstall"
+  alias geml="gem list"
   alias migrate='rake db:migrate'
   alias gemup="gem update --system; gem update; gem cleanup" # Update & cleanup ruby gems
 fi
