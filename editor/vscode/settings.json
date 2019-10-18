@@ -208,13 +208,24 @@
   "eslint.enable": true,
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "vue",
-    "html"
+    {
+      "language": "javascript",
+      "autoFix": true,
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true,
+    },
+    {
+      "language": "vue",
+      "autoFix": true,
+    },
+    {
+      "language": "html",
+      "autoFix": true,
+    },
   ],
   "eslint.options": {
-    "baseConfig": "~/.eslintrc.json",
     "extensions": [
       ".js",
       ".vue",
@@ -224,8 +235,8 @@
 
 // Stylelint
   "stylelint.config": {
-    "extends": "/usr/local/lib/node_modules/stylelint-config-standard",
-    "plugins": "/usr/local/lib/node_modules/stylelint-scss",
+    "extends": "stylelint-config-standard",
+    "plugins": "stylelint-scss",
   },
 
 // Vetur
@@ -256,7 +267,6 @@
 
 // Live Server
   "liveServer.settings.host": "localhost",
-  "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox",
 
 // Trailing Spaces
   "trailing-spaces.trimOnSave": true,
