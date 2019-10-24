@@ -87,6 +87,5 @@ if command -v brew >/dev/null; then
 	}
 
 	# Update & cleanup Homebrew, Cask, MAS, and their installed packages
-	alias brewup="brew update; brew outdated; brew upgrade; brew cu --all --yes --quiet; mas outdated; mas upgrade; brew cleanup; brew doctor;"
-
+	alias brewup="brew update; brew outdated; brew upgrade; brew cu --all --yes --quiet; mas outdated; mas upgrade; brew cleanup; brew doctor; brew bundle dump --force --file='~/Brewfile';"
 fi
