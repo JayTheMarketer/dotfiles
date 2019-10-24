@@ -16,7 +16,7 @@ if which composer >/dev/null; then
   alias clist='composer global show'
 
   # Update & cleanup global composer packages
-  alias composeup="composer selfupdate; composer global update; composer clear-cache"
+  alias composerup="composer selfupdate; composer global update; composer clear-cache"
 fi
 
 if which laravel >/dev/null; then
