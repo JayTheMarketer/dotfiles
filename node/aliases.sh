@@ -1,4 +1,4 @@
 # Node Aliases
 
-# Update & cleanup NPM packages
-alias yarnup="brew upgrade npm; brew upgrade yarn; yarn global upgrade"
+# Upgrade NPM + update & cleanup NPM packages
+alias npmup="brew upgrade node; npm update -g npm; npm outdated; npm update -g"
