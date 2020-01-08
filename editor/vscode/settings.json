@@ -195,11 +195,6 @@
 // Rest
 "rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
 "rest-client.fontSize": 12,
-
-// Prettier
-  "prettier.stylelintIntegration": true,
-  "prettier.tslintIntegration": true,
-  "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
   "prettier.disableLanguages": [],
@@ -313,4 +308,10 @@
       "backgroundColor": "#FF2D00"
     }
   ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 }
