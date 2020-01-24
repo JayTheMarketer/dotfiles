@@ -1,4 +1,4 @@
-# Defined in /var/folders/z7/n40sfdt53cd8d_130wz7s79h0000gp/T//fish.SxLbwC/npmup.fish @ line 2
+# Defined in /var/folders/2m/xvrkknqj1kd8g9t3m6fm0sr40000gq/T//fish.iTgkwP/npmup.fish @ line 2
 function npmup --description 'upgrade npm and all global packages'
-	brew upgrade node; npm update -g npm; npm outdated; npm update -g
+	npm update -g npm; npm outdated -g; npm update -g
 end
