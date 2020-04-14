@@ -228,12 +228,6 @@
     ]
   },
 
-// Stylelint
-  "stylelint.config": {
-    "extends": "stylelint-config-standard",
-    "plugins": "stylelint-scss",
-  },
-
 // Vetur
   "vetur.format.defaultFormatter.html": "js-beautify-html",
 
@@ -314,4 +308,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 }
