@@ -9,6 +9,11 @@
   whitespace = trailing-space,space-before-tab
   excludesFile = ~/.gitignore_global
   attributesFile = ~/.gitattributes
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [url "https://github"]
   insteadOf = git://github
 [status]
