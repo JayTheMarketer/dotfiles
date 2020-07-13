@@ -12,7 +12,6 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.swipeToNavigate": true,
 
 // Editor
   "editor.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
@@ -29,7 +28,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "always",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -51,6 +50,11 @@
       }
     ]
   },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
 
 // Window
   "window.nativeTabs": true,
@@ -58,10 +62,6 @@
 // Files
   "files.insertFinalNewline": true,
   "files.defaultLanguage": "markdown",
-
-// Extensions
-  "extensions.ignoreRecommendations": true,
-  "extensions.showRecommendationsOnlyOnDemand": true,
 
 // File Explorer
   "explorer.sortOrder": "type",
@@ -105,14 +105,12 @@
   "css.validate": false, // disable in favor of stylelint
   "less.validate": false, // disable in favor of stylelint
   "scss.validate": false, // disable in favor of stylelint
-  "autoprefixer.browsers": ["last 2 versions", "> 5%"],
 
 // Markdown
   "[markdown]": {
     "editor.wordWrap": "on",
     "editor.quickSuggestions": true
   },
-  "markdown-preview-enhanced.mermaidTheme": "dark",
 
 // Ruby
   "ruby.lint": {
@@ -193,39 +191,24 @@
   "npm-intellisense.showBuildInLibs": true,
 
 // Rest
-"rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
-"rest-client.fontSize": 12,
+  "rest-client.fontFamily": "'Fira Code iScript', 'SauceCodePro Nerd Font', Menlo",
+  "rest-client.fontSize": 12,
+
+// Prettier
+  "prettier.semi": true,
+  "prettier.trailingComma": "all",
+  "prettier.printWidth": 70,
   "prettier.singleQuote": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.disableLanguages": [],
 
 // ESLint
   "eslint.enable": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true,
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true,
-    },
-    {
-      "language": "vue",
-      "autoFix": true,
-    },
-    {
-      "language": "html",
-      "autoFix": true,
-    },
-  ],
   "eslint.options": {
     "extensions": [
       ".js",
       ".vue",
       ".jsx"
-    ]
+    ],
+    "configFile": "/Users/jschwartz/.eslintrc.json"
   },
 
 // Vetur
@@ -301,12 +284,5 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ],
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  ]
 }
