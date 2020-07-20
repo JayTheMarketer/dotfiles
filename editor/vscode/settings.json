@@ -284,5 +284,7 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ]
+  ],
+  "liveServer.settings.CustomBrowser": "firefox:PrivateMode",
+  "editor.renameOnType": true
 }
