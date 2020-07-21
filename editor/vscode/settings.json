@@ -8,7 +8,7 @@
 // Workbench
   "workbench.colorTheme": "Oceanic Next (dimmed bg)",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#56006b",
+    "statusBar.background": "#56006b"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
@@ -29,6 +29,13 @@
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
   "editor.matchBrackets": "always",
+  "editor.renameOnType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -42,18 +49,13 @@
           "entity.other.attribute-name",
           "tag.decorator.js entity.name.tag.js",
           "tag.decorator.js punctuation.definition.tag.js",
-          "source.js constant.other.object.key.js string.unquoted.label.js",
+          "source.js constant.other.object.key.js string.unquoted.label.js"
         ],
         "settings": {
           "fontStyle": "italic"
         }
       }
     ]
-  },
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
   },
 
 // Window
@@ -133,11 +135,11 @@
     "editor.insertSpaces": false
   },
   "php.suggest.basic": false,
-  "php.validate.run": "onType",
   "phpcs.standard": "Wordpress",
   "phpcs.showSources": true,
   "phpcbf.onsave": true,
   "phpcbf.standard": "Wordpress",
+  "php.validate.run": "onType",
 
 // Python
   "python.linting.flake8Enabled": true,
@@ -152,22 +154,47 @@
 
 // JSON
   "[json]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false
+    }
   },
 
 // JSON with Comments
   "[jsonc]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false
+    }
+  },
+
+// Properties
+  "[properties]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false
+    }
   },
 
 // XML
   "[xml]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false
+    }
   },
 
 // Fish
   "[fish]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false
+    }
   },
 
 /*
@@ -239,6 +266,7 @@
 
 // Live Server
   "liveServer.settings.host": "localhost",
+  "liveServer.settings.CustomBrowser": "firefox:PrivateMode",
 
 // Trailing Spaces
   "trailing-spaces.trimOnSave": true,
@@ -284,7 +312,5 @@
       "color": "#4b5760",
       "backgroundColor": "#FF2D00"
     }
-  ],
-  "liveServer.settings.CustomBrowser": "firefox:PrivateMode",
-  "editor.renameOnType": true
+  ]
 }

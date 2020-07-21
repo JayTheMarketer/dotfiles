@@ -9,13 +9,12 @@
   whitespace = trailing-space,space-before-tab
   excludesFile = ~/.gitignore_global
   attributesFile = ~/.gitattributes
+  trustctime = false # Make `git rebase` safer on macOS. More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[url "https://github"]
-  insteadOf = git://github
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [status]
   short = true
   branch = true
@@ -24,11 +23,13 @@
 [push]
   default = current
   recurseSubmodules = on-demand
+  followTags = true # Make `git push` push relevant annotated tags when pushing branches out.
 [pull]
   rebase = true
 [branch]
   autosetupmerge = always
   autosetuprebase = always
+  sort = -committerdate
 [rebase]
   autoStash = true
   autoSquash = true
@@ -45,7 +46,7 @@
   cmd = code --wait --diff $LOCAL $REMOTE
   prompt = false
 [apply]
-  whitespace = nowarn
+  whitespace = fix
 [grep]
   extendRegexp = true
   lineNumber = true
@@ -84,12 +85,29 @@
 [pretty]
   # Result: <short-sha> <commit-message> (<pointer-names>) -- <commit-author-name>; <relative-time>
   nice = "%C(yellow)%h%C(reset) %C(white)%s%C(cyan)%d%C(reset) -- %an; %ar"
-[alias]
+
+###############################################################################
+# URL Shorthands                                                    #
+###############################################################################
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+  insteadOf = "github:"
+[url "git@gist.github.com:"]
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+  insteadOf = "gist:"
 
 ###############################################################################
 # One-letter Aliases                                                 #
 ###############################################################################
 
+[alias]
   a = add
   b = branch
   c = commit
@@ -99,7 +117,7 @@
   l = log
   m = merge
   o = checkout
-  p = pull
+  p = pull --recurse-submodules
   r = remote
   s = status
   w = whatchanged
@@ -168,6 +186,7 @@
   cherry-pick-merge = !"sh -c 'git cherry-pick --no-commit --mainline 1 $0 && \
     git log -1 --pretty=%P $0 | cut -b 42- > .git/MERGE_HEAD && \
     git commit --verbose'"
+  cherryfetch = !git fetch "$1" "$2" && git cherry-pick HEAD..FETCH_HEAD && true # cherryfetch fetches a repo ($1) / branch ($2) and applies it rebased! the && true at the end eats up the appended args
 
 ###############################################################################
 # Diff Aliases                                                      #
@@ -227,8 +246,7 @@
 
   wtf = !sh -c "~/.bin/git-wtf" # displays summary of the state of the current repo
   ec = config --global -e # opens gitconfig file with $EDITOR
-  cl = clone
-  cloner = clone --recursive # Clone a git repository including all submodules
+  cl = clone --recursive # Clone a git repository including all submodules
   stashes = stash list
   save = stash save
   pop = stash pop
@@ -296,6 +314,7 @@
 # Lookup Aliases                                                    #
 ###############################################################################
 
+  whoami = config user.email # Show the user email for the current repository
   whois = "!sh -c 'git log --regexp-ignore-case -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -" # whois: given a string for an author, try to figure out full name and email:
   whatis = show --no-patch --pretty='tformat:%h (%s, %ad)' --date=short # Given any git object, try to show it briefly
   who = shortlog --summary -- # Show who contributed with summarized changes
