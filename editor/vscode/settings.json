@@ -1,15 +1,8 @@
 {
-/*
-!---------------------------------------!
-?----------------VS Core----------------?
-!---------------------------------------!
-*/
-
-// Workbench
-  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
   "workbench.colorCustomizations": {
     "statusBar.background": "#56006b"
   },
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
 
@@ -60,10 +53,6 @@
 
 // Window
   "window.nativeTabs": true,
-
-// Files
-  "files.insertFinalNewline": true,
-  "files.defaultLanguage": "markdown",
 
 // File Explorer
   "explorer.sortOrder": "type",
@@ -262,7 +251,7 @@
   },
 
 // Project Manager
-  "projectManager.git.baseFolders": ["~/git-repos", "~/dotfiles"],
+  "projectManager.git.baseFolders": ["/Users/jschwartz/git-repos", "/Users/jschwartz/dotfiles"],
 
 // Live Server
   "liveServer.settings.host": "localhost",

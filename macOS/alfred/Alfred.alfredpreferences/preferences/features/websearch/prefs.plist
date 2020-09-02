@@ -19,6 +19,21 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>EB1AD600-9983-4D2C-8769-248D857301E5</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>wow</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search Wowhead for '{query}'</string>
+			<key>url</key>
+			<string>https://www.wowhead.com/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>onlyShowEnabledInPrefs</key>
 	<true/>
