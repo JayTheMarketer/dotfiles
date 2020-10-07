@@ -1,3 +1,3 @@
 function caski --description 'brew cask install'
-	brew cask install $argv
+	brew install --cask $argv
 end

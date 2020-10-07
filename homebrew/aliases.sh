@@ -14,13 +14,12 @@ if command -v brew >/dev/null; then
 	alias brewx='brew remove'
 
 	# Homebrew Cask
-	alias cask='brew cask'
-	alias caski='brew cask install'
+	alias caski='brew install --cask'
 	alias caskin='brew cask info'
-	alias caskl='brew cask list'
-	alias casko='brew cask outdated'
-	alias casks='brew cask search'
-	alias caskx='brew cask uninstall'
+	alias caskl='brew list --cask'
+	alias casko='brew outdated --cask'
+	alias casks='brew search --cask'
+	alias caskx='brew uninstall --cask'
 
 	# More thorough alternative to `brew reinstall`
 	rebrew() {

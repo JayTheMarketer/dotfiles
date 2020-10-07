@@ -43313,7 +43313,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 383 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>287 259 1011 447 0 0 1440 877 </string>
+	<string>231 316 1011 447 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -44207,9 +44207,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>0B455C7F-A5E9-407E-AAEE-C6073D6AFDE3</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 10.15.5 (Build 19F101)</string>
+	<string>Version 10.15.7 (Build 19H2)</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>414</integer>
+	<integer>509</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -45027,6 +45027,8 @@
 	<string>/Users/jschwartz/dotfiles/iterm2</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
+	<key>PreventEscapeSequenceFromClearingHistory</key>
+	<false/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -45042,7 +45044,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-07-17T15:26:01Z</date>
+	<date>2020-10-05T19:08:48Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

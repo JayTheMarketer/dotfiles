@@ -1,3 +1,3 @@
 function caskx --description 'uninstall brew dependencies'
-	brew cask uninstall $argv
+	brew uninstall --cask $argv
 end
