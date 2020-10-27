@@ -13,14 +13,6 @@ if command -v brew >/dev/null; then
 	alias brewu='brew update && brew upgrade'
 	alias brewx='brew remove'
 
-	# Homebrew Cask
-	alias caski='brew install --cask'
-	alias caskin='brew cask info'
-	alias caskl='brew list --cask'
-	alias casko='brew outdated --cask'
-	alias casks='brew search --cask'
-	alias caskx='brew uninstall --cask'
-
 	# More thorough alternative to `brew reinstall`
 	rebrew() {
 		if [ -z "$1" ]; then
@@ -86,5 +78,5 @@ if command -v brew >/dev/null; then
 	}
 
 	# Update & cleanup Homebrew, Cask, MAS, and their installed packages
-	alias brewup="brew update; brew outdated; brew upgrade; brew cu --all --yes --quiet; mas outdated; mas upgrade; brew cleanup; brew doctor; brew bundle dump --force --file='~/Brewfile';"
+	alias brewup="brew update; brew outdated; brew upgrade; mas outdated; mas upgrade; brew cleanup; brew doctor; brew bundle dump --force --file='~/Brewfile';"
 fi

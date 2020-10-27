@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>58162D09-9D54-40F5-8F80-2E08B73A401B</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>curse</string>
+			<key>text</key>
+			<string>Search CurseForge for {query}</string>
+			<key>url</key>
+			<string>https://www.curseforge.com/wow/addons/search?search={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>6DF49743-7783-4E65-8753-DF35AA5D8E89</key>
 		<dict>
 			<key>enabled</key>
