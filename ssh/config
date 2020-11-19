@@ -1,6 +1,0 @@
-Host *
-  ServerAliveInterval 60
-  AddKeysToAgent yes
-  ForwardX11 yes
-
-Include ~/.ssh/config.local
