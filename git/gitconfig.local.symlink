@@ -1,10 +1,6 @@
 # User Credentials
 [user]
-  name = username
-  email = email
-  signingkey = ABCD123E
+  name = JayTheMarketer
+  email = jay.schwartz@sparkdemand.io
 [credential]
   helper = osxkeychain
-  useHttpPath = true
-[gpg]
-  program = /usr/local/MacGPG2/bin/gpg

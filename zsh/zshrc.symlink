@@ -11,6 +11,9 @@ fi
 # iterm integration
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
+# ensure dotfiles variable is set
+export DOTFILES="$HOME/.dotfiles"
+
 # all of our zsh files
 typeset -U config_files
 config_files=($DOTFILES/**/*.zsh)
@@ -168,7 +171,7 @@ done
 unset config_files
 
 # Re-add presonal bin so it is first in the $PATH
-export PATH="${HOME}/bin:${PATH}"
+export PATH="${DOTFILES}/bin:${PATH}"
 
 # keep $PATH clean
 PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
