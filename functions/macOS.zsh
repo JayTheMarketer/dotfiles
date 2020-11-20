@@ -293,8 +293,8 @@ function capwin() { # window to file
     screencapture -i -w "${CAPTURE_FOLDER}/capture-$(date +%Y%m%d_%H%M%S).png"
 }
 
-### Get OS X Software Updates, and update installed Homebrew, NPM, Yarn, Ruby gems, Composer, and their globally installed packages
-alias updateall='sudo softwareupdate --install --all; brewup; npmup; gemup; composerup'
+### Get OS X Software Updates, and update installed Homebrew, NPM, and their globally installed packages
+alias updateall='sudo softwareupdate --install --all; brewup; npmup;'
 
 alias eject="diskutil eject"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
